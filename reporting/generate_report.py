@@ -41,7 +41,7 @@ def ensure_ollama_running():
         print("Local LLM already running")
         return True
     except:
-        print("Local LLM not running → attempting auto start")
+        print("Local LLM not running -> attempting auto start")
 
     try:
         subprocess.Popen(
@@ -82,36 +82,40 @@ def build_prompt(metrics: dict, merged_df: pd.DataFrame) -> str:
     )
 
     return f"""
-You are an automated underwriting risk engine.
+You are a payments underwriting risk analyst generating an internal risk note.
 
-Generate a short internal risk assessment paragraph (120-180 words).
+Write a concise analytical assessment (130-170 words).
 
-Rules:
-- Do NOT write an email
-- Do NOT include greetings or signatures
-- Do NOT use bullet points or numbered lists
-- Do NOT mention yourself
-- Do NOT invent causes not present in the data
+STRICT REQUIREMENTS:
+- Not an email
+- No greetings or signatures
+- No bullet points
+- Must reference specific merchants as evidence
+- Must justify the decision using the data provided
+- No speculation beyond the dataset
 
-Portfolio statistics:
+PORTFOLIO DATA
 Total merchants: {metrics['total_merchants']}
 High risk merchants: {metrics['high_risk_merchants']} ({metrics['high_risk_ratio']*100:.1f}%)
-High risk exposure: {metrics['high_risk_volume']}
+High risk exposure volume: {metrics['high_risk_volume']}
 Expected disputes: {metrics['expected_disputes']}
 Average risk score: {metrics['avg_risk_probability']}
 
-Top risky merchants:
+TOP RISKY MERCHANTS
 {risky_lines}
 
-The output must:
-- classify portfolio risk (low/moderate/elevated)
-- describe dominant risk drivers ONLY using dispute_rate, volume, and internal risk indicators
-- give operational decision:
-  approve / monitor / manual review required
+ANALYSIS INSTRUCTIONS
+1. Classify overall portfolio risk: low / moderate / elevated
+2. Identify dominant risk drivers using ONLY:
+   - dispute behavior
+   - transaction volume
+   - internal risk signals
+3. Cite at least two merchants as supporting evidence
+4. Provide operational decision:
+   approve / monitor / manual review required
+5. Justify WHY that decision follows from the evidence
 
-Do NOT infer geographic causes unless explicitly provided.
-Do NOT recommend approving high risk merchants automatically.
-Write in objective risk system tone.
+Write in professional underwriting tone.
 """
 
 
@@ -145,7 +149,7 @@ def call_local_llm(prompt: str) -> str:
     response = requests.post(
         OLLAMA_URL,
         json={"model": MODEL_NAME, "prompt": prompt, "stream": False},
-        timeout=120
+        timeout=600
     )
 
     if response.status_code != 200:
@@ -204,7 +208,7 @@ def generate_underwriting_report(metrics, merged_df, output_path="output/underwr
 
     # 3️⃣ Deterministic fallback
     if report_text is None:
-        print("No LLM available → using rule-based report")
+        print("No LLM available -> using rule-based report")
         report_text = rule_based_report(metrics)
 
     os.makedirs("output", exist_ok=True)
