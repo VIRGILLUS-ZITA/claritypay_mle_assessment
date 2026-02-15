@@ -636,3 +636,99 @@
 2026-02-15 23:15:11,561 | INFO | pipeline | [STEP 10/10] Building underwriting feature view
 2026-02-15 23:15:11,572 | INFO | pipeline | Underwriting feature view saved output\underwriting_features.csv
 2026-02-15 23:15:11,572 | INFO | pipeline | Data pipeline complete — returning datasets to caller
+2026-02-15 23:43:11,767 | INFO | pipeline | [STEP 1/10] Loading merchant dataset
+2026-02-15 23:43:11,777 | INFO | pipeline | Loaded 50 rows
+2026-02-15 23:43:11,778 | INFO | pipeline | Valid rows: 50
+2026-02-15 23:43:11,778 | INFO | pipeline | [STEP 2/10] Ensuring internal API is running
+2026-02-15 23:43:11,820 | INFO | pipeline | Internal API is ready to use
+2026-02-15 23:43:11,824 | INFO | pipeline | [STEP 3/10] Starting background PDF extraction
+2026-02-15 23:43:11,827 | INFO | pipeline | [STEP 4/10] Fetching country metadata (parallel)
+2026-02-15 23:43:17,393 | INFO | pipeline | SUCCESS country=United Kingdom
+2026-02-15 23:43:17,554 | INFO | pipeline | SUCCESS country=Spain
+2026-02-15 23:43:17,708 | INFO | pipeline | SUCCESS country=United States
+2026-02-15 23:43:17,976 | INFO | pipeline | SUCCESS country=Germany
+2026-02-15 23:43:18,076 | INFO | pipeline | SUCCESS country=France
+2026-02-15 23:43:21,276 | INFO | pipeline | SUCCESS country=Italy
+2026-02-15 23:43:21,655 | INFO | pipeline | SUCCESS country=Netherlands
+2026-02-15 23:43:21,978 | INFO | pipeline | SUCCESS country=Ireland
+2026-02-15 23:43:22,211 | INFO | pipeline | SUCCESS country=Portugal
+2026-02-15 23:43:22,269 | INFO | pipeline | SUCCESS country=Belgium
+2026-02-15 23:43:24,264 | INFO | pipeline | SUCCESS country=Austria
+2026-02-15 23:43:25,443 | INFO | pipeline | SUCCESS country=Sweden
+2026-02-15 23:43:26,239 | INFO | pipeline | SUCCESS country=Poland
+2026-02-15 23:43:26,407 | INFO | pipeline | SUCCESS country=Denmark
+2026-02-15 23:43:26,446 | INFO | pipeline | SUCCESS country=Czech Republic
+2026-02-15 23:43:27,712 | INFO | pipeline | SUCCESS country=Norway
+2026-02-15 23:43:28,965 | INFO | pipeline | SUCCESS country=Finland
+2026-02-15 23:43:30,316 | INFO | pipeline | SUCCESS country=Hungary
+2026-02-15 23:43:30,501 | INFO | pipeline | SUCCESS country=Greece
+2026-02-15 23:43:30,520 | INFO | pipeline | SUCCESS country=Romania
+2026-02-15 23:43:31,379 | INFO | pipeline | SUCCESS country=Bulgaria
+2026-02-15 23:43:31,884 | INFO | pipeline | SUCCESS country=Croatia
+2026-02-15 23:43:32,704 | INFO | pipeline | SUCCESS country=Slovakia
+2026-02-15 23:43:32,707 | INFO | pipeline | Fetched metadata for 23 countries
+2026-02-15 23:43:32,707 | INFO | pipeline | [STEP 5/10] Fetching internal risk data (parallel)
+2026-02-15 23:43:32,735 | INFO | pipeline | SUCCESS merchant_id=M001
+2026-02-15 23:43:32,744 | INFO | pipeline | SUCCESS merchant_id=M002
+2026-02-15 23:43:32,748 | INFO | pipeline | SUCCESS merchant_id=M003
+2026-02-15 23:43:32,757 | INFO | pipeline | SUCCESS merchant_id=M005
+2026-02-15 23:43:32,758 | INFO | pipeline | SUCCESS merchant_id=M006
+2026-02-15 23:43:32,759 | INFO | pipeline | SUCCESS merchant_id=M004
+2026-02-15 23:43:32,772 | INFO | pipeline | SUCCESS merchant_id=M008
+2026-02-15 23:43:32,776 | INFO | pipeline | SUCCESS merchant_id=M007
+2026-02-15 23:43:32,778 | INFO | pipeline | SUCCESS merchant_id=M009
+2026-02-15 23:43:32,780 | INFO | pipeline | SUCCESS merchant_id=M013
+2026-02-15 23:43:32,782 | INFO | pipeline | SUCCESS merchant_id=M014
+2026-02-15 23:43:32,787 | INFO | pipeline | SUCCESS merchant_id=M010
+2026-02-15 23:43:32,792 | INFO | pipeline | SUCCESS merchant_id=M011
+2026-02-15 23:43:32,794 | INFO | pipeline | SUCCESS merchant_id=M016
+2026-02-15 23:43:32,796 | INFO | pipeline | SUCCESS merchant_id=M012
+2026-02-15 23:43:32,798 | INFO | pipeline | SUCCESS merchant_id=M015
+2026-02-15 23:43:32,813 | INFO | pipeline | SUCCESS merchant_id=M019
+2026-02-15 23:43:32,818 | INFO | pipeline | SUCCESS merchant_id=M017
+2026-02-15 23:43:32,824 | INFO | pipeline | SUCCESS merchant_id=M018
+2026-02-15 23:43:32,828 | INFO | pipeline | SUCCESS merchant_id=M020
+2026-02-15 23:43:32,837 | INFO | pipeline | SUCCESS merchant_id=M023
+2026-02-15 23:43:32,842 | INFO | pipeline | SUCCESS merchant_id=M022
+2026-02-15 23:43:32,847 | INFO | pipeline | SUCCESS merchant_id=M021
+2026-02-15 23:43:32,848 | INFO | pipeline | SUCCESS merchant_id=M024
+2026-02-15 23:43:32,848 | INFO | pipeline | SUCCESS merchant_id=M025
+2026-02-15 23:43:32,849 | INFO | pipeline | SUCCESS merchant_id=M026
+2026-02-15 23:43:32,850 | INFO | pipeline | SUCCESS merchant_id=M027
+2026-02-15 23:43:32,859 | INFO | pipeline | SUCCESS merchant_id=M030
+2026-02-15 23:43:32,863 | INFO | pipeline | SUCCESS merchant_id=M028
+2026-02-15 23:43:32,866 | INFO | pipeline | SUCCESS merchant_id=M029
+2026-02-15 23:43:32,869 | INFO | pipeline | SUCCESS merchant_id=M032
+2026-02-15 23:43:32,876 | INFO | pipeline | SUCCESS merchant_id=M033
+2026-02-15 23:43:32,879 | INFO | pipeline | SUCCESS merchant_id=M034
+2026-02-15 23:43:32,883 | INFO | pipeline | SUCCESS merchant_id=M036
+2026-02-15 23:43:32,887 | INFO | pipeline | SUCCESS merchant_id=M031
+2026-02-15 23:43:32,891 | INFO | pipeline | SUCCESS merchant_id=M035
+2026-02-15 23:43:32,893 | INFO | pipeline | SUCCESS merchant_id=M037
+2026-02-15 23:43:32,898 | INFO | pipeline | SUCCESS merchant_id=M038
+2026-02-15 23:43:32,903 | INFO | pipeline | SUCCESS merchant_id=M039
+2026-02-15 23:43:32,907 | INFO | pipeline | SUCCESS merchant_id=M040
+2026-02-15 23:43:32,910 | INFO | pipeline | SUCCESS merchant_id=M041
+2026-02-15 23:43:32,912 | INFO | pipeline | SUCCESS merchant_id=M043
+2026-02-15 23:43:32,915 | INFO | pipeline | SUCCESS merchant_id=M042
+2026-02-15 23:43:32,920 | INFO | pipeline | SUCCESS merchant_id=M045
+2026-02-15 23:43:32,922 | INFO | pipeline | SUCCESS merchant_id=M044
+2026-02-15 23:43:32,925 | INFO | pipeline | SUCCESS merchant_id=M046
+2026-02-15 23:43:32,925 | INFO | pipeline | SUCCESS merchant_id=M047
+2026-02-15 23:43:32,926 | INFO | pipeline | SUCCESS merchant_id=M048
+2026-02-15 23:43:32,928 | INFO | pipeline | SUCCESS merchant_id=M049
+2026-02-15 23:43:32,930 | INFO | pipeline | SUCCESS merchant_id=M050
+2026-02-15 23:43:32,933 | INFO | pipeline | Fetched internal risk for 50 merchants
+2026-02-15 23:43:32,933 | INFO | pipeline | [STEP 6/10] Building enriched dataset
+2026-02-15 23:43:32,944 | INFO | pipeline | Final dataset size: 50
+2026-02-15 23:43:32,945 | INFO | pipeline | [STEP 7/10] Waiting for PDF processing to complete
+2026-02-15 23:43:32,945 | INFO | pipeline | Extracted 649 characters from PDF
+2026-02-15 23:43:32,946 | INFO | pipeline | [STEP 8/10] Scraping claritypay.com
+2026-02-15 23:43:32,946 | INFO | pipeline | Loading existing scrape data from output\claritypay_site_data.json
+2026-02-15 23:43:32,950 | INFO | pipeline | Website data saved output\claritypay_site_data.json
+2026-02-15 23:43:32,951 | INFO | pipeline | [STEP 9/10] Saving outputs
+2026-02-15 23:43:32,959 | INFO | pipeline | Dataset saved output\enriched_merchants.csv
+2026-02-15 23:43:32,962 | INFO | pipeline | PDF text saved output\merchant_summary.txt
+2026-02-15 23:43:32,962 | INFO | pipeline | [STEP 10/10] Building underwriting feature view
+2026-02-15 23:43:32,979 | INFO | pipeline | Underwriting feature view saved output\underwriting_features.csv
+2026-02-15 23:43:32,980 | INFO | pipeline | Data pipeline complete — returning datasets to caller

@@ -16,7 +16,7 @@ from sklearn.metrics import (
 )
 
 
-MODEL_PATH = "model/risk_model.pkl"
+MODEL_PATH = "models/risk_model.pkl"
 
 
 # ------------------------------------------------------

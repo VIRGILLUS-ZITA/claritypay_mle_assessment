@@ -1,0 +1,51 @@
+merchant_id,name,country,registration_number,monthly_volume,transaction_count,dispute_count,internal_risk_flag,internal_last_30d_volume,internal_last_30d_txn_count,internal_avg_ticket_size,normalized_country,region,subregion,risk_probability,predicted_high_risk
+M001,GreenLeaf Retail Ltd,United Kingdom,09446239,125000,3420,2,high,193622.13,248,780.73,United Kingdom,Europe,Northern Europe,0.17244938003080734,0
+M002,MedSpa Wellness Co,United States,,89000,2100,5,high,173934.27,1201,144.82,United States Minor Outlying Islands,Americas,North America,0.9927252185329531,1
+M003,TechGear Electronics,Germany,,210000,5800,1,medium,99823.65,3664,27.24,Germany,Europe,Western Europe,0.01007189552024783,0
+M004,Safe Streets Home Ltd,United Kingdom,SC304267,78000,1890,0,high,52268.85,84,622.25,United Kingdom,Europe,Northern Europe,0.05471111503508997,0
+M005,LaseyAway Beauty,United States,,45000,1200,3,low,7544.4,2851,2.65,United States Minor Outlying Islands,Americas,North America,0.9943912051473665,1
+M006,Club Wyndham Travel,United Kingdom,01234567,320000,8900,4,high,155801.79,599,260.1,United Kingdom,Europe,Northern Europe,0.04714456212985776,0
+M007,Margaritaville Ventures,United States,,156000,4100,2,high,181896.76,2343,77.63,United States Minor Outlying Islands,Americas,North America,0.07796497912062272,0
+M008,Removery Health Ltd,United Kingdom,NI012345,67000,2100,1,medium,132395.27,3847,34.42,United Kingdom,Europe,Northern Europe,0.056540210260689686,0
+M009,Urban Fit Gym,France,,34000,980,0,high,153773.51,3420,44.96,France,Europe,Western Europe,0.02352827890624329,0
+M010,PetCare Plus,United Kingdom,08901234,52000,1650,2,medium,132388.34,2012,65.8,United Kingdom,Europe,Northern Europe,0.6135353819391658,1
+M011,StyleHub Fashion,Spain,,98000,3200,6,medium,119703.23,2969,40.32,Spain,Europe,Southern Europe,0.900863322210626,1
+M012,CleanEats Kitchen,United Kingdom,OC303456,28000,890,1,medium,101887.75,2697,37.78,United Kingdom,Europe,Northern Europe,0.536954484226903,1
+M013,DriveAuto Motors,Italy,,187000,5200,3,high,174258.49,148,1177.42,Italy,Europe,Southern Europe,0.11230122407080623,0
+M014,BookNook Education Ltd,United Kingdom,12674479,41000,1340,0,medium,126806.36,1316,96.36,United Kingdom,Europe,Northern Europe,0.030602409865701164,0
+M015,Sunrise Solar Ltd,United Kingdom,LP123456,92000,2100,2,high,80462.4,207,388.71,United Kingdom,Europe,Northern Europe,0.5940042501248539,1
+M016,DataFlow Analytics,Netherlands,,76000,2400,1,low,39252.0,1217,32.25,Netherlands,Europe,Western Europe,0.1424399844497117,0
+M017,HomeComfort HVAC,United Kingdom,09446240,55000,1890,4,high,171653.19,1679,102.24,United Kingdom,Europe,Northern Europe,0.9830092789397389,1
+M018,FlavorTown Restaurants,Ireland,,44000,1250,2,medium,42636.31,491,86.84,Ireland,Europe,Northern Europe,0.9307962724413391,1
+M019,NextGen Software Ltd,United Kingdom,SC304268,135000,3800,0,medium,41014.11,2876,14.26,United Kingdom,Europe,Northern Europe,0.013192950600196951,0
+M020,Artisan Crafts Co,Portugal,,22000,650,0,medium,82227.56,1388,59.24,Portugal,Europe,Southern Europe,0.03767539858423714,0
+M021,HealthFirst Pharmacy Ltd,United Kingdom,NI012346,88000,2650,3,medium,92098.52,1262,72.98,United Kingdom,Europe,Northern Europe,0.5796958427131212,1
+M022,CycleWorks Sports,Belgium,,31000,920,1,high,136309.04,230,592.65,Belgium,Europe,Western Europe,0.7270212593370817,1
+M023,EcoPower Energy Ltd,United Kingdom,08901235,198000,5400,5,medium,71750.75,1332,53.87,United Kingdom,Europe,Northern Europe,0.2640664175725919,0
+M024,QuickFix Repairs,Austria,,27000,780,0,high,180736.94,2314,78.11,Austria,Europe,Central Europe,0.032880436001761215,0
+M025,Style Studio Ltd,United Kingdom,OC303457,62000,1950,2,medium,108083.86,1175,91.99,United Kingdom,Europe,Northern Europe,0.5223522413222976,1
+M026,TravelWise Agency,Sweden,,115000,3200,1,medium,105433.71,2148,49.08,Sweden,Europe,Northern Europe,0.04625302027512222,0
+M027,FoodMart Grocers Ltd,United Kingdom,12674480,73000,2450,3,medium,99950.1,3557,28.1,United Kingdom,Europe,Northern Europe,0.48503305835631516,1
+M028,BuildRight Construction,Poland,,142000,4100,4,medium,84666.06,809,104.66,Poland,Europe,Central Europe,0.4041544006327032,1
+M029,SmartHome Devices Ltd,United Kingdom,09446241,95000,2800,0,low,27955.65,3927,7.12,United Kingdom,Europe,Northern Europe,0.013903901305494211,0
+M030,GardenGrow Ltd,United Kingdom,SC304269,38000,1100,1,medium,133538.87,2648,50.43,United Kingdom,Europe,Northern Europe,0.3260968235594709,1
+M031,OfficePro Supplies,Czech Republic,,58000,1690,2,medium,140839.57,3546,39.72,Czechia,Europe,Central Europe,0.4466754520146973,1
+M032,ChildCare Plus Ltd,United Kingdom,NI012347,49000,1520,0,medium,97254.94,961,101.2,United Kingdom,Europe,Northern Europe,0.035204251114984514,0
+M033,FitLife Studios,Denmark,,36000,1050,1,high,172274.11,439,392.42,Denmark,Europe,Northern Europe,0.6013693558331316,1
+M034,PrintPerfect Ltd,United Kingdom,08901236,71000,2180,2,medium,134136.84,625,214.62,United Kingdom,Europe,Northern Europe,0.43271420848298003,1
+M035,RiverView Hotels,Norway,,165000,4600,3,low,13581.18,2050,6.62,Norway,Europe,Northern Europe,0.15133355705844528,0
+M036,SecureLock Security Ltd,United Kingdom,12674481,44000,1320,1,low,47954.1,3386,14.16,United Kingdom,Europe,Northern Europe,0.23527856714737533,0
+M037,CoffeeHouse Chain,Finland,,29000,870,0,medium,143134.82,3191,44.86,Finland,Europe,Northern Europe,0.01713439386867797,0
+M038,GreenEnergy Solutions Ltd,United Kingdom,OC303458,112000,3300,4,high,176762.27,551,320.8,United Kingdom,Europe,Northern Europe,0.6988558974032761,1
+M039,Fashion Forward,Hungary,,84000,2550,2,medium,89026.25,776,114.72,Hungary,Europe,Central Europe,0.32967835466428935,1
+M040,LegalEase Services Ltd,United Kingdom,09446242,67000,2100,0,high,125611.59,680,184.72,United Kingdom,Europe,Northern Europe,0.04880318795152049,0
+M041,SportZone Retail,Romania,,51000,1480,3,medium,109185.91,2241,48.72,Romania,Europe,Southeast Europe,0.9642126830257648,1
+M042,CloudTech Software Ltd,United Kingdom,SC304270,189000,5200,2,high,156827.79,2457,63.83,United Kingdom,Europe,Northern Europe,0.04740017255664912,0
+M043,FreshBite Catering,Greece,,33000,990,1,high,159181.11,3753,42.41,Greece,Europe,Southern Europe,0.4191105691516053,1
+M044,PrintAndShip Ltd,United Kingdom,NI012348,76000,2340,1,low,28465.48,3801,7.49,United Kingdom,Europe,Northern Europe,0.06815034199820727,0
+M045,DesignStudio Creative,Bulgaria,,42000,1280,0,medium,140078.57,792,176.87,Bulgaria,Europe,Southeast Europe,0.033923137811936274,0
+M046,WellnessFirst Ltd,United Kingdom,08901237,59000,1780,3,medium,110477.87,1749,63.17,United Kingdom,Europe,Northern Europe,0.9016335147349694,1
+M047,ElectroWorld Gadgets,Croatia,,97000,2900,2,medium,33367.63,3438,9.71,Croatia,Europe,Southeast Europe,0.13514651127528568,0
+M048,TrustBuild Finance Ltd,United Kingdom,12674482,128000,3850,0,medium,75133.55,3894,19.29,United Kingdom,Europe,Northern Europe,0.008915696304494155,0
+M049,UrbanGardens Landscaping,Slovakia,,24000,720,0,high,168324.81,2540,66.27,Slovakia,Europe,Central Europe,0.03210977863183389,0
+M050,DataSecure Ltd,United Kingdom,09446243,145000,4200,2,high,192802.91,3546,54.37,United Kingdom,Europe,Northern Europe,0.053281524895213594,0
