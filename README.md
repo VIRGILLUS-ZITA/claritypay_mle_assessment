@@ -10,21 +10,21 @@ End-to-end flow:
 
 1. Ingest data sources
 
-  CSV dataset
+  - CSV dataset
 
-  Simulated internal API (local service)
+  - Simulated internal API (local service)
 
-  Public country metadata API
+  - Public country metadata API
 
-  PDF extraction (async)
+  - PDF extraction (async)
 
-  Website scraping
+  - Website scraping
 
 2. Validate and collate data into underwriting view
 
 3. Train or load a risk model
 
-  Predict high dispute risk
+  - Predict high dispute risk
 
 4. Aggregate portfolio risk metrics
 
