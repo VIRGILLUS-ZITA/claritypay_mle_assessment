@@ -1,0 +1,15 @@
+# Generated artifacts
+output/
+models/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Environment
+.env
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db
