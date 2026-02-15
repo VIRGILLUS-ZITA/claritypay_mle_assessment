@@ -1,7 +1,7 @@
-Based on the provided portfolio data, I classify the overall portfolio risk as elevated.
+Elevated portfolio risk due to high prevalence of high-risk merchants, with 46% of total merchants classified as such.
 
-The dominant risk drivers are dispute behavior and transaction volume, with high-risk merchants accounting for 44% of the total. M005 and M002, two high-risk merchants from the United States, account for a significant share of the high-risk exposure volume at 45000 and 89000 respectively, both with extremely high risk scores (0.99). This indicates a high likelihood of disputes.
+Dominant risk drivers include dispute behavior and transaction volume, as evidenced by the disproportionately large exposure volume (1612000) among high-risk merchants. Internal risk signals also corroborate this assessment, with average risk scores above the threshold.
 
-The evidence suggests that these merchants are driving the elevated portfolio risk. Therefore, I recommend manual review is required to further assess the risk profiles of these merchants and mitigate potential dispute risks.
+Notable examples of high-risk merchants include M002 and M005, both with significant transaction volumes (>89000 and >45000, respectively) and extremely high risk scores (0.99). Similarly, M017's large volume (>55000) and elevated risk score (0.99) contribute to the overall elevated portfolio risk.
 
-This decision follows from the data, as the high-risk exposure volume and high-risk scores of M005 and M002 indicate a higher likelihood of disputes, which requires closer scrutiny.
+Based on this analysis, we recommend manual review is required for new merchants, particularly those with similar characteristics to M002, M005, and M017. This decision follows from the evidence, as these high-risk merchants have demonstrated a propensity for dispute behavior and large transaction volumes, increasing the likelihood of elevated risk exposure in the portfolio.
