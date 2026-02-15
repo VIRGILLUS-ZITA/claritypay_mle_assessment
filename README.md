@@ -413,3 +413,44 @@ Ingestion, features, modeling, reporting separated into modules.
 >>>>>>> a34fede96d0c436ddf5d6f48c7e5cef38dcb6d18
 
 This project intentionally prioritizes reliability and explainability over heavy model tuning, matching real underwriting workflows.
+
+## Running Unit Tests
+
+The project includes lightweight unit tests covering:
+
+    - schema validation
+    
+    - API client behavior (mocked)
+    
+    - feature engineering correctness
+    
+    - model prediction pipeline
+    
+    - deterministic report fallback
+
+Install test dependencies:
+
+pip install pytest pytest-mock
+
+
+Run tests from project root:
+
+pytest -q
+
+
+Expected output:
+
+5 passed
+
+
+The tests do not require:
+
+    - starting the internal API
+    
+    - internet access
+    
+    - an LLM
+    
+    - model retraining
+
+All external dependencies are mocked to ensure reproducibility.
