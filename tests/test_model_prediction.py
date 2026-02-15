@@ -16,6 +16,6 @@ def test_prediction_output(tmp_path):
 
     model_path = "models/risk_model.pkl"
 
-    result = predict_risk(df, model_path)
+    result = predict_risk(model_path, df)
 
     assert "risk_probability" in result.columns
