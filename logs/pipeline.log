@@ -148,3 +148,11 @@
 2026-02-15 22:37:28,174 | INFO | pipeline | Loaded 50 rows
 2026-02-15 22:37:28,174 | INFO | pipeline | Valid rows: 50
 2026-02-15 22:37:28,174 | INFO | pipeline | [STEP 2/10] Ensuring internal API is running
+2026-02-15 22:42:04,160 | INFO | pipeline | [STEP 1/10] Loading merchant dataset
+2026-02-15 22:42:04,166 | INFO | pipeline | Loaded 50 rows
+2026-02-15 22:42:04,167 | INFO | pipeline | Valid rows: 50
+2026-02-15 22:42:04,167 | INFO | pipeline | [STEP 2/10] Ensuring internal API is running
+2026-02-15 22:50:48,384 | INFO | pipeline | [STEP 1/10] Loading merchant dataset
+2026-02-15 22:50:48,389 | INFO | pipeline | Loaded 50 rows
+2026-02-15 22:50:48,389 | INFO | pipeline | Valid rows: 50
+2026-02-15 22:50:48,390 | INFO | pipeline | [STEP 2/10] Ensuring internal API is running

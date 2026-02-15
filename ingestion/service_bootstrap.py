@@ -25,7 +25,7 @@ def ensure_internal_api_running():
             sys.executable,
             "-m",
             "uvicorn",
-            "ingestion.simulated_internal_api:app",
+            "simulated_api.simulated_internal_api:app",
             "--host",
             "127.0.0.1",
             "--port",
@@ -33,9 +33,8 @@ def ensure_internal_api_running():
         ],
         cwd=project_root,
         env=env,
-        stdout=subprocess.DEVNULL,
-        stderr=subprocess.DEVNULL,
     )
+
 
     # wait for boot
     for _ in range(15):
