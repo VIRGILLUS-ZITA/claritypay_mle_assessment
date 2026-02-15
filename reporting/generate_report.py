@@ -1,15 +1,72 @@
 import os
 import requests
 import pandas as pd
+import shutil
+import subprocess
+import time
 
 
+# ======================================================
+# CONFIG
+# ======================================================
 OLLAMA_URL = "http://localhost:11434/api/generate"
+OLLAMA_HEALTH = "http://localhost:11434/api/tags"
 MODEL_NAME = "llama3"
 
 
-# ------------------------------------------------------
-# Build underwriting prompt
-# ------------------------------------------------------
+# ======================================================
+# PROVIDER DETECTION
+# ======================================================
+def has_openai_key():
+    return os.getenv("OPENAI_API_KEY") not in (None, "")
+
+
+def has_openai_package():
+    try:
+        import openai  # noqa
+        return True
+    except ImportError:
+        return False
+
+
+
+def has_ollama_installed():
+    return shutil.which("ollama") is not None
+
+
+def ensure_ollama_running():
+    """Start Ollama automatically if installed but not running"""
+    try:
+        requests.get(OLLAMA_HEALTH, timeout=2)
+        print("Local LLM already running")
+        return True
+    except:
+        print("Local LLM not running → attempting auto start")
+
+    try:
+        subprocess.Popen(
+            ["ollama", "serve"],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+        )
+    except Exception:
+        return False
+
+    # wait for startup
+    for _ in range(10):
+        try:
+            requests.get(OLLAMA_HEALTH, timeout=2)
+            print("Local LLM started")
+            return True
+        except:
+            time.sleep(1)
+
+    return False
+
+
+# ======================================================
+# PROMPT BUILDER
+# ======================================================
 def build_prompt(metrics: dict, merged_df: pd.DataFrame) -> str:
 
     top_risky = (
@@ -58,46 +115,101 @@ Write in objective risk system tone.
 """
 
 
-# ------------------------------------------------------
-# Call local LLM
-# ------------------------------------------------------
-def call_local_llm(prompt: str) -> str:
+# ======================================================
+# OPENAI CALL
+# ======================================================
+def call_openai(prompt: str) -> str:
+    try:
+        from openai import OpenAI
+    except ImportError:
+        raise RuntimeError("OpenAI package not installed")
 
-    print("Prompt sent to local LLM:")
+    print("Using OpenAI API")
+    client = OpenAI()
+
+    response = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=[{"role": "user", "content": prompt}],
+        temperature=0.2
+    )
+
+    return response.choices[0].message.content
+
+
+# ======================================================
+# LOCAL LLM CALL
+# ======================================================
+def call_local_llm(prompt: str) -> str:
+    print("Using local LLM via Ollama")
+
     response = requests.post(
         OLLAMA_URL,
-        json={
-            "model": MODEL_NAME,
-            "prompt": prompt,
-            "stream": False
-        }
+        json={"model": MODEL_NAME, "prompt": prompt, "stream": False},
+        timeout=120
     )
-    print("Response received from local LLM")
 
     if response.status_code != 200:
-        raise RuntimeError("Local LLM call failed. Is Ollama running?")
+        raise RuntimeError("Local LLM call failed")
 
     return response.json()["response"]
 
 
-# ------------------------------------------------------
-# Generate report
-# ------------------------------------------------------
+# ======================================================
+# FALLBACK RULE-BASED REPORT
+# ======================================================
+def rule_based_report(metrics: dict) -> str:
+
+    ratio = metrics["high_risk_ratio"]
+
+    if ratio > 0.4:
+        level = "elevated"
+        decision = "manual review required"
+    elif ratio > 0.2:
+        level = "moderate"
+        decision = "monitor"
+    else:
+        level = "low"
+        decision = "approve"
+
+    return f"""
+Portfolio risk is classified as {level}. The portfolio contains {metrics['high_risk_merchants']} high-risk merchants out of {metrics['total_merchants']} with an exposure volume of {metrics['high_risk_volume']}. The average risk probability across merchants is {metrics['avg_risk_probability']:.3f}. Based on dispute behavior and transaction volume indicators, the recommended operational decision is: {decision}.
+""".strip()
+
+
+# ======================================================
+# MAIN REPORT GENERATOR
+# ======================================================
 def generate_underwriting_report(metrics, merged_df, output_path="output/underwriting_report.txt"):
 
-    print('Building prompt...')
+    print("\n=== GENERATING UNDERWRITING REPORT ===")
+
     prompt = build_prompt(metrics, merged_df)
-    print('Completed building prompt')
 
-    print('Calling local LLM...')
-    report_text = call_local_llm(prompt)
-    print('Received response from local LLM')
+    report_text = None
 
-    print('Saving report to file...')
+    # 1️⃣ OpenAI
+    if has_openai_key() and has_openai_package():
+        try:
+            report_text = call_openai(prompt)
+        except Exception as e:
+            print("OpenAI failed:", e)
+
+    # 2️⃣ Local LLM
+    if report_text is None and has_ollama_installed():
+        if ensure_ollama_running():
+            try:
+                report_text = call_local_llm(prompt)
+            except Exception as e:
+                print("Local LLM failed:", e)
+
+    # 3️⃣ Deterministic fallback
+    if report_text is None:
+        print("No LLM available → using rule-based report")
+        report_text = rule_based_report(metrics)
+
     os.makedirs("output", exist_ok=True)
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(report_text)
-    print(f"Report saved to {output_path}")
 
     print("\n=== UNDERWRITING REPORT GENERATED ===\n")
     print(report_text)
