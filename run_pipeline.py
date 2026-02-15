@@ -6,6 +6,10 @@ from model.train_risk_model import train_model, load_model, predict_risk
 from model.portfolio_risk import generate_portfolio_risk
 from reporting.generate_report import generate_underwriting_report
 
+import sys
+from pathlib import Path
+
+sys.path.append(str(Path(__file__).resolve().parent))
 
 
 def main():
