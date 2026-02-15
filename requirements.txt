@@ -53,3 +53,10 @@ joblib
 # ---- Option B: OpenAI API (optional cloud usage)
 # Uncomment if you want to use OpenAI instead of local LLM
 # openai>=1.0
+
+# ======================================================
+# Testing
+# ======================================================
+pytest
+pytest-mock
+
