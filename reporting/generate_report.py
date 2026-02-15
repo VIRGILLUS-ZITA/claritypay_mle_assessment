@@ -195,6 +195,7 @@ def generate_underwriting_report(metrics, merged_df, output_path="output/underwr
     if has_openai_key() and has_openai_package():
         try:
             report_text = call_openai(prompt)
+            provider_used = "OpenAI"
         except Exception as e:
             print("OpenAI failed:", e)
 
@@ -203,6 +204,7 @@ def generate_underwriting_report(metrics, merged_df, output_path="output/underwr
         if ensure_ollama_running():
             try:
                 report_text = call_local_llm(prompt)
+                provider_used = "Local LLM"
             except Exception as e:
                 print("Local LLM failed:", e)
 
@@ -210,6 +212,7 @@ def generate_underwriting_report(metrics, merged_df, output_path="output/underwr
     if report_text is None:
         print("No LLM available -> using rule-based report")
         report_text = rule_based_report(metrics)
+        provider_used = "Rule-based fallback"
 
     os.makedirs("output", exist_ok=True)
     with open(output_path, "w", encoding="utf-8") as f:
@@ -218,4 +221,4 @@ def generate_underwriting_report(metrics, merged_df, output_path="output/underwr
     print("\n=== UNDERWRITING REPORT GENERATED ===\n")
     print(report_text)
 
-    return report_text
+    return report_text, provider_used

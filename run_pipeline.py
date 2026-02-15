@@ -5,6 +5,7 @@ from features.build_features_pipeline import run_pipeline
 from model.train_risk_model import train_model, load_model, predict_risk
 from model.portfolio_risk import generate_portfolio_risk
 from reporting.generate_report import generate_underwriting_report
+from common.pipeline_summary import print_pipeline_summary
 
 import sys
 from pathlib import Path
@@ -108,7 +109,8 @@ def main():
     print("\n=== GENERATING UNDERWRITING REPORT ===")
 
     report_path = os.path.join(output_dir, "underwriting_report.txt")
-    generate_underwriting_report(metrics, merged_df, report_path)
+    report_text, provider = generate_underwriting_report(metrics, merged_df, report_path)
+    print_pipeline_summary(metrics, provider, output_dir)
 
     print(f"Underwriting report saved → {report_path}")
 
