@@ -38,7 +38,11 @@ def build_underwriting_features(enriched_df: pd.DataFrame) -> pd.DataFrame:
     df["volume_tier"] = df["monthly_volume"].apply(classify_volume)
 
     # --- geo risk ---
-    df["geo_risk"] = df["region"].apply(classify_geo_risk)
+    if "region" in df.columns:
+        df["geo_risk"] = df["region"].apply(classify_geo_risk)
+    else:
+        # allow precomputed geo_risk OR default
+        df["geo_risk"] = df.get("geo_risk", "unknown")
 
     # --- internal risk already exists ---
     df["internal_risk"] = df["internal_risk_flag"]
