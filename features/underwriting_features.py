@@ -45,7 +45,11 @@ def build_underwriting_features(enriched_df: pd.DataFrame) -> pd.DataFrame:
         df["geo_risk"] = df.get("geo_risk", "unknown")
 
     # --- internal risk already exists ---
-    df["internal_risk"] = df["internal_risk_flag"]
+    if "internal_risk_flag" in df.columns:
+        df["internal_risk"] = df["internal_risk_flag"]
+    elif "internal_risk" not in df.columns:
+        # allow missing upstream enrichment
+        df["internal_risk"] = df.get("internal_risk", "unknown")
 
     # --- heuristic combined signal ---
     df["overall_risk_hint"] = (
