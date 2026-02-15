@@ -140,3 +140,11 @@
 2026-02-15 20:54:23,255 | INFO | pipeline | Dataset saved output\enriched_merchants.csv
 2026-02-15 20:54:23,261 | INFO | pipeline | PDF text saved output\merchant_summary.txt
 2026-02-15 20:54:23,261 | INFO | pipeline | [STEP 9/10] Building underwriting feature view
+2026-02-15 22:26:50,628 | INFO | pipeline | [STEP 1/10] Loading merchant dataset
+2026-02-15 22:26:50,660 | INFO | pipeline | Loaded 50 rows
+2026-02-15 22:26:50,662 | INFO | pipeline | Valid rows: 50
+2026-02-15 22:26:50,662 | INFO | pipeline | [STEP 2/10] Ensuring internal API is running
+2026-02-15 22:37:28,166 | INFO | pipeline | [STEP 1/10] Loading merchant dataset
+2026-02-15 22:37:28,174 | INFO | pipeline | Loaded 50 rows
+2026-02-15 22:37:28,174 | INFO | pipeline | Valid rows: 50
+2026-02-15 22:37:28,174 | INFO | pipeline | [STEP 2/10] Ensuring internal API is running
