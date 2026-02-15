@@ -58,7 +58,7 @@ def build_underwriting_features(enriched_df: pd.DataFrame) -> pd.DataFrame:
         df["internal_risk"].astype(str)
     )
 
-    return df[[
+    expected_columns = [
         "merchant_id",
         "country",
         "region",
@@ -82,5 +82,12 @@ def build_underwriting_features(enriched_df: pd.DataFrame) -> pd.DataFrame:
 
         # combined hint
         "overall_risk_hint"
-    ]]
+    ]
 
+    # Add missing columns as NA (robust to partial inputs)
+    for col in expected_columns:
+        if col not in df.columns:
+            df[col] = None
+
+    return df[expected_columns]
+   
