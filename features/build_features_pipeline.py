@@ -3,6 +3,7 @@ import pandas as pd
 import json
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
+from ingestion.service_bootstrap import ensure_internal_api_running
 from ingestion.internal_service_client import get_internal_risk
 from ingestion.external_country_service import get_country_details
 from ingestion.pdf_processor import extract_pdf_text
@@ -55,16 +56,25 @@ def run_pipeline(input_path: str, output_dir: str):
     df = valid_df
 
     # ------------------------------------------------------
-    # 2. Start PDF extraction in background
+    # 2. Ensure internal API is running
     # ------------------------------------------------------
-    log_step(2, TOTAL_STEPS, "Starting background PDF extraction")
+    log_step(2, TOTAL_STEPS, "Ensuring internal API is running")
+
+    ensure_internal_api_running()
+    logger.info("Internal API is ready to use")
+
+    # ------------------------------------------------------
+    # 3. Start PDF extraction in background
+    # ------------------------------------------------------
+    log_step(3, TOTAL_STEPS, "Starting background PDF extraction")
+
     background_executor = ThreadPoolExecutor(max_workers=2)
     pdf_future = background_executor.submit(extract_pdf_text)
 
     # ------------------------------------------------------
-    # 3. Fetch country metadata
+    # 4. Fetch country metadata
     # ------------------------------------------------------
-    log_step(3, TOTAL_STEPS, "Fetching country metadata (parallel)")
+    log_step(4, TOTAL_STEPS, "Fetching country metadata (parallel)")
 
     def fetch_all_country_metadata(countries, max_workers=5):
         results = {}
@@ -90,9 +100,9 @@ def run_pipeline(input_path: str, output_dir: str):
     logger.info(f"Fetched metadata for {len(country_map)} countries")
 
     # ------------------------------------------------------
-    # 4. Fetch internal risk
+    # 5. Fetch internal risk
     # ------------------------------------------------------
-    log_step(4, TOTAL_STEPS, "Fetching internal risk data (parallel)")
+    log_step(5, TOTAL_STEPS, "Fetching internal risk data (parallel)")
 
     def fetch_all_internal_risk(merchant_ids, max_workers=10):
         results = {}
@@ -118,9 +128,9 @@ def run_pipeline(input_path: str, output_dir: str):
     logger.info(f"Fetched internal risk for {len(internal_map)} merchants")
 
     # ------------------------------------------------------
-    # 5. Build enriched dataset
+    # 6. Build enriched dataset
     # ------------------------------------------------------
-    log_step(5, TOTAL_STEPS, "Building enriched dataset")
+    log_step(6, TOTAL_STEPS, "Building enriched dataset")
 
     records = []
 
@@ -158,16 +168,18 @@ def run_pipeline(input_path: str, output_dir: str):
     logger.info(f"Final dataset size: {len(final_df)}")
 
     # ------------------------------------------------------
-    # 6. Wait for PDF extraction
+    # 7. Wait for PDF extraction
     # ------------------------------------------------------
-    log_step(6, TOTAL_STEPS, "Waiting for PDF processing to complete")
+    log_step(7, TOTAL_STEPS, "Waiting for PDF processing to complete")
+
     pdf_text = pdf_future.result()
     logger.info(f"Extracted {len(pdf_text)} characters from PDF")
 
     # ------------------------------------------------------
-    # 7. Scrape website
+    # 8. Scrape website
     # ------------------------------------------------------
-    log_step(7, TOTAL_STEPS, "Scraping claritypay.com")
+    log_step(8, TOTAL_STEPS, "Scraping claritypay.com")
+    
     if os.path.exists(OUTPUT_SCRAPE):
         logger.info(f"Loading existing scrape data from {OUTPUT_SCRAPE}")
         with open(OUTPUT_SCRAPE, "r") as f:
@@ -185,9 +197,9 @@ def run_pipeline(input_path: str, output_dir: str):
     logger.info(f"Website data saved {OUTPUT_SCRAPE}")
 
     # ------------------------------------------------------
-    # 8. Save outputs
+    # 9. Save outputs
     # ------------------------------------------------------
-    log_step(8, TOTAL_STEPS, "Saving outputs")
+    log_step(9, TOTAL_STEPS, "Saving outputs")
 
     final_df.to_csv(OUTPUT_DATASET, index=False)
     logger.info(f"Dataset saved {OUTPUT_DATASET}")
@@ -198,9 +210,9 @@ def run_pipeline(input_path: str, output_dir: str):
     logger.info(f"PDF text saved {OUTPUT_PDF_TEXT}")
 
     # ------------------------------------------------------
-    # 9. Build underwriting features
+    # 10. Build underwriting features
     # ------------------------------------------------------
-    log_step(9, TOTAL_STEPS, "Building underwriting feature view")
+    log_step(10, TOTAL_STEPS, "Building underwriting feature view")
 
     features_df = build_underwriting_features(final_df)
 

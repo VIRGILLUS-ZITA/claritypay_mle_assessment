@@ -1,0 +1,142 @@
+2026-02-15 20:53:07,440 | INFO | pipeline | [STEP 1/10] Loading merchant dataset
+2026-02-15 20:53:07,498 | INFO | pipeline | Loaded 50 rows
+2026-02-15 20:53:07,499 | INFO | pipeline | Valid rows: 50
+2026-02-15 20:53:07,500 | INFO | pipeline | [STEP 2/10] Starting background PDF extraction
+2026-02-15 20:53:07,508 | INFO | pipeline | [STEP 3/10] Fetching country metadata (parallel)
+2026-02-15 20:53:13,766 | INFO | pipeline | SUCCESS country=France
+2026-02-15 20:53:14,808 | INFO | pipeline | SUCCESS country=Germany
+2026-02-15 20:53:15,099 | INFO | pipeline | SUCCESS country=United Kingdom
+2026-02-15 20:53:15,208 | INFO | pipeline | SUCCESS country=Spain
+2026-02-15 20:53:15,263 | INFO | pipeline | SUCCESS country=United States
+2026-02-15 20:53:19,455 | INFO | pipeline | SUCCESS country=Italy
+2026-02-15 20:53:20,877 | INFO | pipeline | SUCCESS country=Netherlands
+2026-02-15 20:53:20,971 | INFO | pipeline | SUCCESS country=Belgium
+2026-02-15 20:53:21,064 | INFO | pipeline | SUCCESS country=Portugal
+2026-02-15 20:53:21,161 | INFO | pipeline | SUCCESS country=Ireland
+2026-02-15 20:53:24,152 | INFO | pipeline | SUCCESS country=Austria
+2026-02-15 20:53:25,852 | INFO | pipeline | SUCCESS country=Sweden
+2026-02-15 20:53:25,939 | INFO | pipeline | SUCCESS country=Poland
+2026-02-15 20:53:26,055 | INFO | pipeline | SUCCESS country=Czech Republic
+2026-02-15 20:53:26,099 | INFO | pipeline | SUCCESS country=Denmark
+2026-02-15 20:53:28,577 | INFO | pipeline | SUCCESS country=Norway
+2026-02-15 20:53:30,894 | INFO | pipeline | SUCCESS country=Finland
+2026-02-15 20:53:31,053 | INFO | pipeline | SUCCESS country=Hungary
+2026-02-15 20:53:31,099 | INFO | pipeline | SUCCESS country=Romania
+2026-02-15 20:53:31,209 | INFO | pipeline | SUCCESS country=Greece
+2026-02-15 20:53:32,826 | INFO | pipeline | SUCCESS country=Bulgaria
+2026-02-15 20:53:35,339 | INFO | pipeline | SUCCESS country=Croatia
+2026-02-15 20:53:35,429 | INFO | pipeline | SUCCESS country=Slovakia
+2026-02-15 20:53:35,436 | INFO | pipeline | Fetched metadata for 23 countries
+2026-02-15 20:53:35,437 | INFO | pipeline | [STEP 4/10] Fetching internal risk data (parallel)
+2026-02-15 20:53:43,607 | INFO | pipeline | SUCCESS merchant_id=M007
+2026-02-15 20:53:43,614 | INFO | pipeline | SUCCESS merchant_id=M003
+2026-02-15 20:53:43,632 | INFO | pipeline | SUCCESS merchant_id=M004
+2026-02-15 20:53:43,638 | INFO | pipeline | SUCCESS merchant_id=M006
+2026-02-15 20:53:43,639 | INFO | pipeline | SUCCESS merchant_id=M008
+2026-02-15 20:53:43,639 | INFO | pipeline | SUCCESS merchant_id=M010
+2026-02-15 20:53:43,639 | INFO | pipeline | SUCCESS merchant_id=M001
+2026-02-15 20:53:43,640 | INFO | pipeline | SUCCESS merchant_id=M005
+2026-02-15 20:53:43,644 | INFO | pipeline | SUCCESS merchant_id=M009
+2026-02-15 20:53:43,644 | INFO | pipeline | SUCCESS merchant_id=M002
+2026-02-15 20:53:51,739 | INFO | pipeline | SUCCESS merchant_id=M015
+2026-02-15 20:53:51,787 | INFO | pipeline | SUCCESS merchant_id=M019
+2026-02-15 20:53:51,807 | INFO | pipeline | SUCCESS merchant_id=M014
+2026-02-15 20:53:51,811 | INFO | pipeline | SUCCESS merchant_id=M016
+2026-02-15 20:53:51,815 | INFO | pipeline | SUCCESS merchant_id=M012
+2026-02-15 20:53:51,819 | INFO | pipeline | SUCCESS merchant_id=M018
+2026-02-15 20:53:51,825 | INFO | pipeline | SUCCESS merchant_id=M013
+2026-02-15 20:53:51,831 | INFO | pipeline | SUCCESS merchant_id=M011
+2026-02-15 20:53:51,833 | INFO | pipeline | SUCCESS merchant_id=M017
+2026-02-15 20:53:51,907 | INFO | pipeline | SUCCESS merchant_id=M020
+2026-02-15 20:53:59,858 | INFO | pipeline | SUCCESS merchant_id=M021
+2026-02-15 20:53:59,891 | INFO | pipeline | SUCCESS merchant_id=M022
+2026-02-15 20:53:59,905 | INFO | pipeline | SUCCESS merchant_id=M024
+2026-02-15 20:53:59,909 | INFO | pipeline | SUCCESS merchant_id=M025
+2026-02-15 20:53:59,915 | INFO | pipeline | SUCCESS merchant_id=M023
+2026-02-15 20:53:59,921 | INFO | pipeline | SUCCESS merchant_id=M028
+2026-02-15 20:53:59,929 | INFO | pipeline | SUCCESS merchant_id=M029
+2026-02-15 20:53:59,933 | INFO | pipeline | SUCCESS merchant_id=M026
+2026-02-15 20:53:59,936 | INFO | pipeline | SUCCESS merchant_id=M027
+2026-02-15 20:54:00,087 | INFO | pipeline | SUCCESS merchant_id=M030
+2026-02-15 20:54:08,018 | INFO | pipeline | SUCCESS merchant_id=M031
+2026-02-15 20:54:08,025 | INFO | pipeline | SUCCESS merchant_id=M032
+2026-02-15 20:54:08,031 | INFO | pipeline | SUCCESS merchant_id=M035
+2026-02-15 20:54:08,036 | INFO | pipeline | SUCCESS merchant_id=M034
+2026-02-15 20:54:08,038 | INFO | pipeline | SUCCESS merchant_id=M033
+2026-02-15 20:54:08,040 | INFO | pipeline | SUCCESS merchant_id=M036
+2026-02-15 20:54:08,053 | INFO | pipeline | SUCCESS merchant_id=M037
+2026-02-15 20:54:08,056 | INFO | pipeline | SUCCESS merchant_id=M038
+2026-02-15 20:54:08,080 | INFO | pipeline | SUCCESS merchant_id=M039
+2026-02-15 20:54:08,227 | INFO | pipeline | SUCCESS merchant_id=M040
+2026-02-15 20:54:16,141 | INFO | pipeline | SUCCESS merchant_id=M045
+2026-02-15 20:54:16,168 | INFO | pipeline | SUCCESS merchant_id=M042
+2026-02-15 20:54:16,170 | INFO | pipeline | SUCCESS merchant_id=M044
+2026-02-15 20:54:16,172 | INFO | pipeline | SUCCESS merchant_id=M047
+2026-02-15 20:54:16,173 | INFO | pipeline | SUCCESS merchant_id=M048
+2026-02-15 20:54:16,174 | INFO | pipeline | SUCCESS merchant_id=M043
+2026-02-15 20:54:16,175 | INFO | pipeline | SUCCESS merchant_id=M046
+2026-02-15 20:54:16,175 | INFO | pipeline | SUCCESS merchant_id=M041
+2026-02-15 20:54:16,180 | INFO | pipeline | SUCCESS merchant_id=M049
+2026-02-15 20:54:16,287 | INFO | pipeline | SUCCESS merchant_id=M050
+2026-02-15 20:54:16,300 | INFO | pipeline | Fetched internal risk for 50 merchants
+2026-02-15 20:54:16,301 | INFO | pipeline | [STEP 5/10] Building enriched dataset
+2026-02-15 20:54:16,305 | WARNING | pipeline | Skipping merchant_id=M001 due to missing internal data
+2026-02-15 20:54:16,306 | WARNING | pipeline | Skipping merchant_id=M002 due to missing internal data
+2026-02-15 20:54:16,307 | WARNING | pipeline | Skipping merchant_id=M003 due to missing internal data
+2026-02-15 20:54:16,311 | WARNING | pipeline | Skipping merchant_id=M004 due to missing internal data
+2026-02-15 20:54:16,312 | WARNING | pipeline | Skipping merchant_id=M005 due to missing internal data
+2026-02-15 20:54:16,313 | WARNING | pipeline | Skipping merchant_id=M006 due to missing internal data
+2026-02-15 20:54:16,314 | WARNING | pipeline | Skipping merchant_id=M007 due to missing internal data
+2026-02-15 20:54:16,316 | WARNING | pipeline | Skipping merchant_id=M008 due to missing internal data
+2026-02-15 20:54:16,321 | WARNING | pipeline | Skipping merchant_id=M009 due to missing internal data
+2026-02-15 20:54:16,324 | WARNING | pipeline | Skipping merchant_id=M010 due to missing internal data
+2026-02-15 20:54:16,329 | WARNING | pipeline | Skipping merchant_id=M011 due to missing internal data
+2026-02-15 20:54:16,334 | WARNING | pipeline | Skipping merchant_id=M012 due to missing internal data
+2026-02-15 20:54:16,341 | WARNING | pipeline | Skipping merchant_id=M013 due to missing internal data
+2026-02-15 20:54:16,348 | WARNING | pipeline | Skipping merchant_id=M014 due to missing internal data
+2026-02-15 20:54:16,355 | WARNING | pipeline | Skipping merchant_id=M015 due to missing internal data
+2026-02-15 20:54:16,357 | WARNING | pipeline | Skipping merchant_id=M016 due to missing internal data
+2026-02-15 20:54:16,358 | WARNING | pipeline | Skipping merchant_id=M017 due to missing internal data
+2026-02-15 20:54:16,360 | WARNING | pipeline | Skipping merchant_id=M018 due to missing internal data
+2026-02-15 20:54:16,361 | WARNING | pipeline | Skipping merchant_id=M019 due to missing internal data
+2026-02-15 20:54:16,362 | WARNING | pipeline | Skipping merchant_id=M020 due to missing internal data
+2026-02-15 20:54:16,363 | WARNING | pipeline | Skipping merchant_id=M021 due to missing internal data
+2026-02-15 20:54:16,363 | WARNING | pipeline | Skipping merchant_id=M022 due to missing internal data
+2026-02-15 20:54:16,364 | WARNING | pipeline | Skipping merchant_id=M023 due to missing internal data
+2026-02-15 20:54:16,364 | WARNING | pipeline | Skipping merchant_id=M024 due to missing internal data
+2026-02-15 20:54:16,366 | WARNING | pipeline | Skipping merchant_id=M025 due to missing internal data
+2026-02-15 20:54:16,367 | WARNING | pipeline | Skipping merchant_id=M026 due to missing internal data
+2026-02-15 20:54:16,373 | WARNING | pipeline | Skipping merchant_id=M027 due to missing internal data
+2026-02-15 20:54:16,376 | WARNING | pipeline | Skipping merchant_id=M028 due to missing internal data
+2026-02-15 20:54:16,391 | WARNING | pipeline | Skipping merchant_id=M029 due to missing internal data
+2026-02-15 20:54:16,407 | WARNING | pipeline | Skipping merchant_id=M030 due to missing internal data
+2026-02-15 20:54:16,425 | WARNING | pipeline | Skipping merchant_id=M031 due to missing internal data
+2026-02-15 20:54:16,442 | WARNING | pipeline | Skipping merchant_id=M032 due to missing internal data
+2026-02-15 20:54:16,449 | WARNING | pipeline | Skipping merchant_id=M033 due to missing internal data
+2026-02-15 20:54:16,462 | WARNING | pipeline | Skipping merchant_id=M034 due to missing internal data
+2026-02-15 20:54:16,474 | WARNING | pipeline | Skipping merchant_id=M035 due to missing internal data
+2026-02-15 20:54:16,493 | WARNING | pipeline | Skipping merchant_id=M036 due to missing internal data
+2026-02-15 20:54:16,522 | WARNING | pipeline | Skipping merchant_id=M037 due to missing internal data
+2026-02-15 20:54:16,551 | WARNING | pipeline | Skipping merchant_id=M038 due to missing internal data
+2026-02-15 20:54:16,587 | WARNING | pipeline | Skipping merchant_id=M039 due to missing internal data
+2026-02-15 20:54:16,595 | WARNING | pipeline | Skipping merchant_id=M040 due to missing internal data
+2026-02-15 20:54:16,601 | WARNING | pipeline | Skipping merchant_id=M041 due to missing internal data
+2026-02-15 20:54:16,604 | WARNING | pipeline | Skipping merchant_id=M042 due to missing internal data
+2026-02-15 20:54:16,606 | WARNING | pipeline | Skipping merchant_id=M043 due to missing internal data
+2026-02-15 20:54:16,613 | WARNING | pipeline | Skipping merchant_id=M044 due to missing internal data
+2026-02-15 20:54:16,617 | WARNING | pipeline | Skipping merchant_id=M045 due to missing internal data
+2026-02-15 20:54:16,625 | WARNING | pipeline | Skipping merchant_id=M046 due to missing internal data
+2026-02-15 20:54:16,643 | WARNING | pipeline | Skipping merchant_id=M047 due to missing internal data
+2026-02-15 20:54:16,651 | WARNING | pipeline | Skipping merchant_id=M048 due to missing internal data
+2026-02-15 20:54:16,655 | WARNING | pipeline | Skipping merchant_id=M049 due to missing internal data
+2026-02-15 20:54:16,657 | WARNING | pipeline | Skipping merchant_id=M050 due to missing internal data
+2026-02-15 20:54:16,662 | INFO | pipeline | Final dataset size: 0
+2026-02-15 20:54:16,663 | INFO | pipeline | [STEP 6/10] Waiting for PDF processing to complete
+2026-02-15 20:54:16,664 | INFO | pipeline | Extracted 649 characters from PDF
+2026-02-15 20:54:16,664 | INFO | pipeline | [STEP 7/10] Scraping claritypay.com
+2026-02-15 20:54:16,665 | INFO | pipeline | Scraping website data...
+2026-02-15 20:54:23,243 | INFO | pipeline | Website data saved output\claritypay_site_data.json
+2026-02-15 20:54:23,244 | INFO | pipeline | [STEP 8/10] Saving outputs
+2026-02-15 20:54:23,255 | INFO | pipeline | Dataset saved output\enriched_merchants.csv
+2026-02-15 20:54:23,261 | INFO | pipeline | PDF text saved output\merchant_summary.txt
+2026-02-15 20:54:23,261 | INFO | pipeline | [STEP 9/10] Building underwriting feature view
