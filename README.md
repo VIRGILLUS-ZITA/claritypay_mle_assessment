@@ -9,33 +9,6 @@ The system is designed to run on a clean machine with zero configuration and gra
 End-to-end flow:
 
 1. Ingest data sources
-
-<<<<<<< HEAD
-    CSV dataset
-
-Simulated internal API (local service)
-
-Public country metadata API
-
-PDF extraction (async)
-
-Website scraping
-
-Validate and collate data into underwriting view
-
-Train or load a risk model
-
-Predict high dispute risk
-
-Aggregate portfolio risk metrics
-
-Generate underwriting report (LLM or fallback)
-
-Architecture
-data sources → ingestion → feature engineering → model → portfolio aggregation → LLM report
-
-
-Project structure:
 =======
   - CSV dataset
 
@@ -62,7 +35,6 @@ data sources → ingestion → feature engineering → model → portfolio aggre
 
 
 ### Project structure:
->>>>>>> a34fede96d0c436ddf5d6f48c7e5cef38dcb6d18
 
 data/
 ingestion/
@@ -74,11 +46,7 @@ output/
 models/
 run_pipeline.py
 
-<<<<<<< HEAD
-Requirements
-=======
 ## Requirements
->>>>>>> a34fede96d0c436ddf5d6f48c7e5cef38dcb6d18
 
 Python 3.10+
 
@@ -91,28 +59,6 @@ Optional (for cloud LLM):
 
 pip install openai
 
-<<<<<<< HEAD
-Running the pipeline
-Basic run (no training, prediction only)
-python run_pipeline.py --predict
-
-Train model + predict
-python run_pipeline.py --train --predict
-
-Custom dataset
-python run_pipeline.py --input data/test_merchants.csv --predict
-
-Custom output folder
-python run_pipeline.py --output results/ --predict
-
-Data Sources Used
-1. Simulated Internal API (local FastAPI service)
-
-Provides:
-
-internal risk tier
-
-transaction summary
 =======
 ## Running the pipeline
 ### Basic run (no training, prediction only)
@@ -135,27 +81,12 @@ Provides:
   - internal risk tier
 
   - transaction summary
->>>>>>> a34fede96d0c436ddf5d6f48c7e5cef38dcb6d18
+
 
 The pipeline automatically starts the API if not running.
 
 No manual setup required.
 
-<<<<<<< HEAD
-2. Public API — REST Countries
-
-Used to enrich merchants with:
-
-region
-
-subregion
-
-normalized country
-
-Handles failures and rate limits gracefully.
-
-3. CSV Dataset
-=======
 ### 2. Public API — REST Countries
 
 Used to enrich merchants with:
