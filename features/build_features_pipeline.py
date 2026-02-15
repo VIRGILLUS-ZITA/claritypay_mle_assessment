@@ -9,7 +9,7 @@ from ingestion.pdf_processor import extract_pdf_text
 from ingestion.claritypay_scraper import scrape_claritypay
 from ingestion.schema_validator import validate_schema_columns, validate_rows
 from common.logger_config import setup_logger
-from underwriting_features import build_underwriting_features
+from features.underwriting_features import build_underwriting_features
 
 
 logger = setup_logger()
