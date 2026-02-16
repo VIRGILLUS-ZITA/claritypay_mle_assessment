@@ -1,0 +1,9 @@
+Internal Risk Note:
+
+Based on portfolio data, I classify the overall risk level as elevated. The high-risk merchant proportion (42%) and exposure volume ($1,413,000) exceed acceptable thresholds.
+
+Dominant risk drivers are dispute behavior and transaction volume. Merchants M005 and M002, both from the United States, exhibit high risk scores (1.00 and 0.99, respectively), indicating a propensity for disputes. The high transaction volumes of these merchants ($45,000 and $89,000, respectively) further contribute to the elevated risk profile.
+
+I recommend manual review required for these merchants to ensure adequate risk mitigation strategies are in place.
+
+This decision follows from the evidence as it addresses the heightened dispute potential and large transaction volumes associated with these high-risk merchants.
