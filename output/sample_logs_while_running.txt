@@ -1,0 +1,218 @@
+LOGS WILL LOOK LIKE THIS WHEN RUNNING IN TERMINAL
+python run_pipeline.py --predict
+[17:26:31] [INFO] [STEP 1/5] Building enriched merchant dataset with features
+[17:26:31] [INFO] 
+=== Building dataset ===
+[17:26:31] [INFO] [STEP 1/10] Loading merchant dataset
+[17:26:31] [INFO] Loaded 50 rows
+[17:26:31] [INFO] Valid rows: 50
+[17:26:31] [INFO] [STEP 2/10] Ensuring internal API is running
+INFO:     127.0.0.1:58581 - "GET /merchant/M001 HTTP/1.1" 200 OK
+Internal API already running
+[17:26:31] [INFO] Internal API is ready to use
+[17:26:31] [INFO] [STEP 3/10] Starting background PDF extraction
+[17:26:31] [INFO] [STEP 4/10] Fetching country metadata (parallel)
+[17:26:48] [INFO] SUCCESS country=United States
+[17:26:48] [INFO] SUCCESS country=Germany
+[17:26:48] [INFO] SUCCESS country=Spain
+[17:26:48] [INFO] SUCCESS country=United Kingdom
+[17:26:48] [INFO] SUCCESS country=France
+[17:27:06] [INFO] SUCCESS country=Italy
+[17:27:06] [INFO] SUCCESS country=Portugal
+[17:27:06] [INFO] SUCCESS country=Belgium
+[17:27:06] [INFO] SUCCESS country=Ireland
+[17:27:06] [INFO] SUCCESS country=Netherlands
+[17:27:25] [INFO] SUCCESS country=Austria
+[17:27:25] [INFO] SUCCESS country=Sweden
+[17:27:26] [INFO] SUCCESS country=Czech Republic
+[17:27:35] [INFO] SUCCESS country=Norway
+[17:27:35] [INFO] SUCCESS country=Hungary
+[17:27:35] [INFO] SUCCESS country=Finland
+[17:27:40] [INFO] SUCCESS country=Denmark
+[17:27:40] [INFO] SUCCESS country=Poland
+[17:27:43] [INFO] SUCCESS country=Bulgaria
+[17:27:43] [INFO] SUCCESS country=Romania
+[17:27:43] [INFO] SUCCESS country=Greece
+[17:27:49] [INFO] SUCCESS country=Croatia
+[17:27:49] [INFO] SUCCESS country=Slovakia
+[17:27:49] [INFO] Fetched metadata for 23 countries
+[17:27:49] [INFO] [STEP 5/10] Fetching internal risk data (parallel)
+INFO:     127.0.0.1:50355 - "GET /merchant/M002 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50354 - "GET /merchant/M001 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50356 - "GET /merchant/M003 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50357 - "GET /merchant/M004 HTTP/1.1" 200 OK
+[17:27:49] [INFO] SUCCESS merchant_id=M001
+INFO:     127.0.0.1:50358 - "GET /merchant/M005 HTTP/1.1" 200 OK
+[17:27:49] [INFO] SUCCESS merchant_id=M002
+[17:27:49] [INFO] SUCCESS merchant_id=M003
+INFO:     127.0.0.1:50359 - "GET /merchant/M006 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50361 - "GET /merchant/M007 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50360 - "GET /merchant/M008 HTTP/1.1" 200 OK
+[17:27:49] [INFO] SUCCESS merchant_id=M004
+[17:27:49] [INFO] SUCCESS merchant_id=M005
+INFO:     127.0.0.1:50363 - "GET /merchant/M010 HTTP/1.1" 200 OK
+[17:27:49] [INFO] SUCCESS merchant_id=M006
+[17:27:49] [INFO] SUCCESS merchant_id=M007
+[17:27:49] [INFO] SUCCESS merchant_id=M008
+INFO:     127.0.0.1:50362 - "GET /merchant/M009 HTTP/1.1" 200 OK
+[17:27:50] [INFO] SUCCESS merchant_id=M010
+[17:27:50] [INFO] SUCCESS merchant_id=M009
+INFO:     127.0.0.1:50364 - "GET /merchant/M011 HTTP/1.1" 200 OK
+[17:27:50] [INFO] SUCCESS merchant_id=M011
+INFO:     127.0.0.1:50365 - "GET /merchant/M012 HTTP/1.1" 200 OK
+[17:27:50] [INFO] SUCCESS merchant_id=M012
+INFO:     127.0.0.1:50368 - "GET /merchant/M015 HTTP/1.1" 200 OK
+[17:27:50] [INFO] SUCCESS merchant_id=M015
+INFO:     127.0.0.1:50367 - "GET /merchant/M014 HTTP/1.1" 200 OK
+[17:27:50] [INFO] SUCCESS merchant_id=M014
+INFO:     127.0.0.1:50369 - "GET /merchant/M016 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50370 - "GET /merchant/M013 HTTP/1.1" 200 OK
+[17:27:50] [INFO] SUCCESS merchant_id=M016
+INFO:     127.0.0.1:50371 - "GET /merchant/M018 HTTP/1.1" 200 OK
+[17:27:50] [INFO] SUCCESS merchant_id=M013
+INFO:     127.0.0.1:50372 - "GET /merchant/M017 HTTP/1.1" 200 OK
+[17:27:51] [INFO] SUCCESS merchant_id=M018
+[17:27:51] [INFO] SUCCESS merchant_id=M017
+INFO:     127.0.0.1:50373 - "GET /merchant/M020 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50374 - "GET /merchant/M019 HTTP/1.1" 200 OK
+[17:27:51] [INFO] SUCCESS merchant_id=M020
+[17:27:51] [INFO] SUCCESS merchant_id=M019
+INFO:     127.0.0.1:50375 - "GET /merchant/M021 HTTP/1.1" 200 OK
+[17:27:51] [INFO] SUCCESS merchant_id=M021
+INFO:     127.0.0.1:50376 - "GET /merchant/M022 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50377 - "GET /merchant/M023 HTTP/1.1" 200 OK
+[17:27:51] [INFO] SUCCESS merchant_id=M022
+[17:27:51] [INFO] SUCCESS merchant_id=M023
+INFO:     127.0.0.1:50378 - "GET /merchant/M024 HTTP/1.1" 200 OK
+[17:27:51] [INFO] SUCCESS merchant_id=M024
+INFO:     127.0.0.1:50380 - "GET /merchant/M025 HTTP/1.1" 200 OK
+[17:27:52] [INFO] SUCCESS merchant_id=M025
+INFO:     127.0.0.1:50381 - "GET /merchant/M026 HTTP/1.1" 200 OK
+[17:27:52] [INFO] SUCCESS merchant_id=M026
+INFO:     127.0.0.1:50382 - "GET /merchant/M027 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50383 - "GET /merchant/M028 HTTP/1.1" 200 OK
+[17:27:53] [INFO] SUCCESS merchant_id=M027
+INFO:     127.0.0.1:50384 - "GET /merchant/M029 HTTP/1.1" 200 OK
+[17:27:53] [INFO] SUCCESS merchant_id=M028
+[17:27:53] [INFO] SUCCESS merchant_id=M029
+INFO:     127.0.0.1:50385 - "GET /merchant/M030 HTTP/1.1" 200 OK
+[17:27:53] [INFO] SUCCESS merchant_id=M030
+INFO:     127.0.0.1:50386 - "GET /merchant/M031 HTTP/1.1" 200 OK
+[17:27:54] [INFO] SUCCESS merchant_id=M031
+INFO:     127.0.0.1:50387 - "GET /merchant/M032 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53475 - "GET /merchant/M033 HTTP/1.1" 200 OK
+[17:27:54] [INFO] SUCCESS merchant_id=M032
+[17:27:55] [INFO] SUCCESS merchant_id=M033
+INFO:     127.0.0.1:57572 - "GET /merchant/M034 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56172 - "GET /merchant/M036 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56175 - "GET /merchant/M037 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56174 - "GET /merchant/M038 HTTP/1.1" 200 OK
+[17:27:56] [INFO] SUCCESS merchant_id=M037
+INFO:     127.0.0.1:56176 - "GET /merchant/M039 HTTP/1.1" 200 OK
+[17:27:56] [INFO] SUCCESS merchant_id=M038
+INFO:     127.0.0.1:56177 - "GET /merchant/M040 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56179 - "GET /merchant/M041 HTTP/1.1" 200 OK
+[17:27:56] [INFO] SUCCESS merchant_id=M040
+INFO:     127.0.0.1:56183 - "GET /merchant/M042 HTTP/1.1" 200 OK
+[17:27:57] [INFO] SUCCESS merchant_id=M041
+[17:27:57] [INFO] SUCCESS merchant_id=M042
+INFO:     127.0.0.1:56184 - "GET /merchant/M043 HTTP/1.1" 200 OK
+[17:27:57] [INFO] SUCCESS merchant_id=M043
+INFO:     127.0.0.1:59457 - "GET /merchant/M034 HTTP/1.1" 200 OK
+[17:27:57] [INFO] SUCCESS merchant_id=M034
+INFO:     127.0.0.1:59458 - "GET /merchant/M044 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59459 - "GET /merchant/M045 HTTP/1.1" 200 OK
+[17:27:58] [INFO] SUCCESS merchant_id=M044
+INFO:     127.0.0.1:59460 - "GET /merchant/M035 HTTP/1.1" 200 OK
+[17:27:58] [INFO] SUCCESS merchant_id=M045
+INFO:     127.0.0.1:59464 - "GET /merchant/M046 HTTP/1.1" 200 OK
+[17:27:58] [INFO] SUCCESS merchant_id=M035
+[17:27:58] [INFO] SUCCESS merchant_id=M046
+INFO:     127.0.0.1:59463 - "GET /merchant/M036 HTTP/1.1" 200 OK
+[17:27:58] [INFO] SUCCESS merchant_id=M036
+INFO:     127.0.0.1:59465 - "GET /merchant/M047 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59467 - "GET /merchant/M048 HTTP/1.1" 200 OK
+[17:27:58] [INFO] SUCCESS merchant_id=M047
+INFO:     127.0.0.1:59468 - "GET /merchant/M039 HTTP/1.1" 200 OK
+[17:27:58] [INFO] SUCCESS merchant_id=M048
+[17:27:58] [INFO] SUCCESS merchant_id=M039
+INFO:     127.0.0.1:59469 - "GET /merchant/M049 HTTP/1.1" 200 OK
+[17:27:58] [INFO] SUCCESS merchant_id=M049
+INFO:     127.0.0.1:53623 - "GET /merchant/M050 HTTP/1.1" 200 OK
+[17:27:59] [INFO] SUCCESS merchant_id=M050
+[17:27:59] [INFO] Fetched internal risk for 50 merchants
+[17:27:59] [INFO] [STEP 6/10] Building enriched dataset
+[17:27:59] [INFO] Final dataset size: 50
+[17:27:59] [INFO] [STEP 7/10] Waiting for PDF processing to complete
+[17:27:59] [INFO] Extracted 649 characters from PDF
+[17:27:59] [INFO] [STEP 8/10] Scraping claritypay.com
+[17:27:59] [INFO] Loading existing scrape data from output\claritypay_site_data.json
+[17:27:59] [INFO] Website data saved output\claritypay_site_data.json
+[17:27:59] [INFO] [STEP 9/10] Saving outputs
+[17:27:59] [INFO] Dataset saved output\enriched_merchants.csv
+[17:27:59] [INFO] PDF text saved output\merchant_summary.txt
+[17:27:59] [INFO] [STEP 10/10] Building underwriting feature view
+[17:28:00] [INFO] Underwriting feature view saved output\underwriting_features.csv
+[17:28:00] [INFO] Data pipeline complete — returning datasets to caller
+[17:28:00] [INFO] [STEP 2/5] Model training and prediction
+[17:28:00] [INFO] 
+=== MODEL STEP ===
+[17:28:00] [INFO] Loading existing model...
+Loading trained model from models/risk_model.pkl
+[17:28:00] [INFO] [STEP 3/5] Generating predictions with the model
+[17:28:00] [INFO] 
+=== PREDICTION STEP ===
+[17:28:00] [INFO] Predictions saved output\merchant_predictions.csv
+[17:28:00] [INFO] [STEP 4/5] Generating portfolio risk metrics and dataset
+[17:28:00] [INFO] 
+=== PORTFOLIO RISK ANALYSIS ===
+
+========== PORTFOLIO RISK SUMMARY ==========
+Total merchants: 50
+High-risk merchants: 24 (48.0%)
+High-risk exposure volume: 1552000
+Expected disputes (est): 34511.16
+Average portfolio risk score: 0.341
+=============================================
+
+[17:28:00] [INFO] Portfolio dataset saved output\portfolio_view.csv
+[17:28:00] [INFO] [STEP 5/5] Generating underwriting report with LLM
+[17:28:00] [INFO]
+=== GENERATING UNDERWRITING REPORT ===
+
+=== GENERATING UNDERWRITING REPORT ===
+Local LLM already running
+Using local LLM via Ollama
+
+=== UNDERWRITING REPORT GENERATED ===
+
+Elevated Risk Assessment for the Portfolio
+
+The high risk exposure volume of 1552000 and a disproportionate number of high-risk merchants (48.0%) justify an elevated overall portfolio risk classification. The average risk score of 0.341 further supports this assessment.
+
+Transaction volume is a significant risk driver, with the top five risky merchants (M002, M005, M011, M017, and M041) cumulatively accounting for 434000 in transactions, which is approximately 28% of the total portfolio volume. The high-risk nature of these merchants is also evident from their elevated risk scores, with three out of five exceeding a risk score of 0.95.
+
+M002 and M011 are particularly concerning, with M002's high-risk score (0.99) and substantial transaction volume (89000). Similarly, M011's significant volume (98000) and high-risk score (0.93) warrant closer scrutiny.
+
+Given the portfolio's elevated risk profile and the dominant influence of transaction volume, I recommend a "monitor" operational decision to ensure continuous monitoring of these high-risk merchants' dispute behavior and transactions. This approach will enable proactive intervention and minimize potential losses.
+
+====================================================
+PIPELINE EXECUTION SUMMARY
+====================================================
+
+Dataset processed:        50 merchants
+High risk merchants:      24 (48.0%)
+Portfolio risk level:     Elevated
+Report provider:          Local LLM
+
+Generated files:
+ - output/enriched_merchants.csv
+ - output/underwriting_features.csv
+ - output/merchant_predictions.csv
+ - output/portfolio_view.csv
+ - output/underwriting_report.txt
+ - models/risk_model.pkl
+
+Pipeline completed successfully
+====================================================
+[17:32:35] [INFO] Underwriting report saved -> output\underwriting_report.txt
