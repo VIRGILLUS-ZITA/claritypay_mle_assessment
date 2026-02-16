@@ -206,13 +206,8 @@ def load_model(model_path: str = MODEL_PATH):
 # ------------------------------------------------------
 # Predict risk using trained model
 # ------------------------------------------------------
-def predict_risk(model_path: str, features_df: pd.DataFrame):
+def predict_risk(model, features_df: pd.DataFrame):
 
-    import joblib
-
-    print(f"Loading trained model from {model_path}")
-    model = joblib.load(model_path)
-      
     categorical_features = [
         "geo_risk",
         "internal_risk"
