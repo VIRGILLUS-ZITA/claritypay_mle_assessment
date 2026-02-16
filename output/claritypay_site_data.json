@@ -1,0 +1,6 @@
+{
+  "value_propositions": [],
+  "partners": [],
+  "public_stats": [],
+  "error": "HTTPSConnectionPool(host='claritypay.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000012160C33890>, 'Connection to claritypay.com timed out. (connect timeout=10)'))"
+}
