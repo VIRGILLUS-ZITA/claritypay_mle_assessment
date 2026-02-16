@@ -24,7 +24,7 @@ def setup_logger():
 
     # ---- file handler ----
     file_handler = RotatingFileHandler(
-        "logs/pipeline.log",
+        "logs/featurelog.log",
         maxBytes=1_000_000,
         backupCount=3
     )
@@ -59,7 +59,7 @@ def setup_logger_run():
 
     # ---- file handler ----
     file_handler = RotatingFileHandler(
-        "logs/pipeline.log",
+        "logs/mainpipeline_log.log",
         maxBytes=1_000_000,
         backupCount=3
     )
