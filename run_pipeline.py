@@ -6,12 +6,21 @@ from model.train_risk_model import train_model, load_model, predict_risk
 from model.portfolio_risk import generate_portfolio_risk
 from reporting.generate_report import generate_underwriting_report
 from common.pipeline_summary import print_pipeline_summary
+from common.logger_config import setup_logger_run
 
 import sys
 from pathlib import Path
 
 sys.path.append(str(Path(__file__).resolve().parent))
 
+logger = setup_logger_run()
+
+
+TOTAL_STEPS = 5
+
+
+def log_step(step, total, message):
+    logger.info(f"[STEP {step}/{total}] {message}")
 
 def main():
 
@@ -53,7 +62,8 @@ def main():
     # --------------------------------------------------
     # BUILD DATASET STEP
     # --------------------------------------------------
-    print("\n=== Building dataset ===")
+    log_step(1, TOTAL_STEPS, "Building enriched merchant dataset with features")
+    logger.info("\n=== Building dataset ===")
     final_df, features_df = run_pipeline(input_path, output_dir)
 
     features_path = os.path.join(output_dir, "underwriting_features.csv")
@@ -62,57 +72,61 @@ def main():
     # ------------------------------------------------------
     # MODEL STEP
     # ------------------------------------------------------
-    print("\n=== MODEL STEP ===")
+    log_step(2, TOTAL_STEPS, "Model training and prediction")
+    logger.info("\n=== MODEL STEP ===")
 
     if args.train:
-        print("Training model...")
+        logger.info("Training model...")
         train_model(features_path)   # only trains & saves model
 
-        print("Loading freshly trained model...")
+        logger.info("Loading freshly trained model...")
         model = load_model()
 
     elif args.predict:
-        print("Loading existing model...")
+        logger.info("Loading existing model...")
         model = load_model()
 
     else:
-        print("No --train or --predict flag provided. Exiting.")
+        logger.warning("No --train or --predict flag provided. Exiting.")
         return
 
 
     # ------------------------------------------------------
     # PREDICTION STEP (COMMON PATH)
     # ------------------------------------------------------
-    print("\n=== PREDICTION STEP ===")
+    log_step(3, TOTAL_STEPS, "Generating predictions with the model")
+    logger.info("\n=== PREDICTION STEP ===")
 
     scored_df = predict_risk(model, features_df)
 
     predictions_path = os.path.join(output_dir, "merchant_predictions.csv")
     scored_df.to_csv(predictions_path, index=False)
-    print(f"Predictions saved {predictions_path}")
+    logger.info(f"Predictions saved {predictions_path}")
 
 
     # ------------------------------------------------------
     # PORTFOLIO RISK STEP
     # ------------------------------------------------------
-    print("\n=== PORTFOLIO RISK ANALYSIS ===")
+    log_step(4, TOTAL_STEPS, "Generating portfolio risk metrics and dataset")
+    logger.info("\n=== PORTFOLIO RISK ANALYSIS ===")
 
     metrics, merged_df = generate_portfolio_risk(final_df, scored_df)
 
     merged_path = os.path.join(output_dir, "portfolio_view.csv")
     merged_df.to_csv(merged_path, index=False)
-    print(f"Portfolio dataset saved {merged_path}")
+    logger.info(f"Portfolio dataset saved {merged_path}")
 
     # ------------------------------------------------------
     # LLM UNDERWRITING REPORT
     # ------------------------------------------------------
-    print("\n=== GENERATING UNDERWRITING REPORT ===")
+    log_step(5, TOTAL_STEPS, "Generating underwriting report with LLM")
+    logger.info("\n=== GENERATING UNDERWRITING REPORT ===")
 
     report_path = os.path.join(output_dir, "underwriting_report.txt")
     report_text, provider = generate_underwriting_report(metrics, merged_df, report_path)
     print_pipeline_summary(metrics, provider, output_dir)
 
-    print(f"Underwriting report saved → {report_path}")
+    logger.info(f"Underwriting report saved → {report_path}")
 
 
 if __name__ == "__main__":
