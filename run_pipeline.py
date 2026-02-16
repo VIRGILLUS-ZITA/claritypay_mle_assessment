@@ -126,7 +126,7 @@ def main():
     report_text, provider = generate_underwriting_report(metrics, merged_df, report_path)
     print_pipeline_summary(metrics, provider, output_dir)
 
-    logger.info(f"Underwriting report saved → {report_path}")
+    logger.info(f"Underwriting report saved -> {report_path}")
 
 
 if __name__ == "__main__":

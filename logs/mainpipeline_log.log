@@ -1,0 +1,37 @@
+2026-02-16 17:20:01,855 | INFO | mainpipeline_log | [STEP 1/5] Building enriched merchant dataset with features
+2026-02-16 17:20:01,859 | INFO | mainpipeline_log | 
+=== Building dataset ===
+2026-02-16 17:21:27,898 | INFO | mainpipeline_log | [STEP 2/5] Model training and prediction
+2026-02-16 17:21:27,899 | INFO | mainpipeline_log | 
+=== MODEL STEP ===
+2026-02-16 17:21:27,899 | INFO | mainpipeline_log | Loading existing model...
+2026-02-16 17:21:27,904 | INFO | mainpipeline_log | [STEP 3/5] Generating predictions with the model
+2026-02-16 17:21:27,905 | INFO | mainpipeline_log | 
+=== PREDICTION STEP ===
+2026-02-16 17:21:27,919 | INFO | mainpipeline_log | Predictions saved output\merchant_predictions.csv
+2026-02-16 17:21:27,920 | INFO | mainpipeline_log | [STEP 4/5] Generating portfolio risk metrics and dataset
+2026-02-16 17:21:27,921 | INFO | mainpipeline_log | 
+=== PORTFOLIO RISK ANALYSIS ===
+2026-02-16 17:21:27,932 | INFO | mainpipeline_log | Portfolio dataset saved output\portfolio_view.csv
+2026-02-16 17:21:27,933 | INFO | mainpipeline_log | [STEP 5/5] Generating underwriting report with LLM
+2026-02-16 17:21:27,933 | INFO | mainpipeline_log | 
+=== GENERATING UNDERWRITING REPORT ===
+2026-02-16 17:26:31,779 | INFO | mainpipeline_log | [STEP 1/5] Building enriched merchant dataset with features
+2026-02-16 17:26:31,780 | INFO | mainpipeline_log | 
+=== Building dataset ===
+2026-02-16 17:28:00,212 | INFO | mainpipeline_log | [STEP 2/5] Model training and prediction
+2026-02-16 17:28:00,271 | INFO | mainpipeline_log | 
+=== MODEL STEP ===
+2026-02-16 17:28:00,313 | INFO | mainpipeline_log | Loading existing model...
+2026-02-16 17:28:00,379 | INFO | mainpipeline_log | [STEP 3/5] Generating predictions with the model
+2026-02-16 17:28:00,425 | INFO | mainpipeline_log | 
+=== PREDICTION STEP ===
+2026-02-16 17:28:00,492 | INFO | mainpipeline_log | Predictions saved output\merchant_predictions.csv
+2026-02-16 17:28:00,494 | INFO | mainpipeline_log | [STEP 4/5] Generating portfolio risk metrics and dataset
+2026-02-16 17:28:00,505 | INFO | mainpipeline_log | 
+=== PORTFOLIO RISK ANALYSIS ===
+2026-02-16 17:28:00,592 | INFO | mainpipeline_log | Portfolio dataset saved output\portfolio_view.csv
+2026-02-16 17:28:00,603 | INFO | mainpipeline_log | [STEP 5/5] Generating underwriting report with LLM
+2026-02-16 17:28:00,604 | INFO | mainpipeline_log | 
+=== GENERATING UNDERWRITING REPORT ===
+2026-02-16 17:32:35,947 | INFO | mainpipeline_log | Underwriting report saved -> output\underwriting_report.txt

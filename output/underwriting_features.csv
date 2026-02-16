@@ -1,51 +1,51 @@
 merchant_id,country,region,monthly_volume,transaction_count,dispute_count,dispute_rate,internal_last_30d_volume,internal_last_30d_txn_count,internal_avg_ticket_size,volume_tier,geo_risk,behavior_risk,internal_risk,overall_risk_hint
-M001,United Kingdom,,125000,3420,2,0.0005847953216374269,75247.15,1629,46.19,high,low,low,medium,low_low_medium
-M002,United States,,89000,2100,5,0.002380952380952381,157827.05,2811,56.15,medium,low,low,high,low_low_high
-M003,Germany,,210000,5800,1,0.00017241379310344826,115030.04,1175,97.9,high,low,low,medium,low_low_medium
-M004,United Kingdom,,78000,1890,0,0.0,137469.31,1988,69.15,medium,low,low,medium,low_low_medium
-M005,United States,,45000,1200,3,0.0025,173222.03,2776,62.4,medium,low,low,high,low_low_high
-M006,United Kingdom,,320000,8900,4,0.00044943820224719103,130986.59,2635,49.71,high,low,low,medium,low_low_medium
-M007,United States,,156000,4100,2,0.0004878048780487805,136388.45,3786,36.02,high,low,low,medium,low_low_medium
-M008,United Kingdom,,67000,2100,1,0.0004761904761904762,126236.5,918,137.51,medium,low,low,medium,low_low_medium
-M009,France,,34000,980,0,0.0,168754.22,1686,100.09,medium,low,low,high,low_low_high
-M010,United Kingdom,,52000,1650,2,0.0012121212121212121,124342.49,230,540.62,medium,low,low,high,low_low_high
-M011,Spain,,98000,3200,6,0.001875,23907.96,3417,7.0,medium,low,low,medium,low_low_medium
-M012,United Kingdom,,28000,890,1,0.0011235955056179776,144689.3,3096,46.73,medium,low,low,medium,low_low_medium
-M013,Italy,,187000,5200,3,0.000576923076923077,145342.17,3924,37.04,high,low,low,medium,low_low_medium
-M014,United Kingdom,,41000,1340,0,0.0,1798.57,3500,0.51,medium,low,low,medium,low_low_medium
-M015,United Kingdom,,92000,2100,2,0.0009523809523809524,31291.29,1575,19.87,medium,low,low,medium,low_low_medium
-M016,Netherlands,,76000,2400,1,0.0004166666666666667,135993.06,3829,35.52,medium,low,low,medium,low_low_medium
-M017,United Kingdom,,55000,1890,4,0.0021164021164021165,161001.62,2438,66.04,medium,low,low,high,low_low_high
-M018,Ireland,,44000,1250,2,0.0016,137639.95,2642,52.1,medium,low,low,medium,low_low_medium
-M019,United Kingdom,,135000,3800,0,0.0,143733.06,3564,40.33,high,low,low,medium,low_low_medium
-M020,Portugal,,22000,650,0,0.0,53626.45,2786,19.25,medium,low,low,medium,low_low_medium
-M021,United Kingdom,,88000,2650,3,0.0011320754716981133,104658.0,1091,95.93,medium,low,low,medium,low_low_medium
-M022,Belgium,,31000,920,1,0.0010869565217391304,165487.58,723,228.89,medium,low,low,high,low_low_high
-M023,United Kingdom,,198000,5400,5,0.000925925925925926,80245.21,68,1180.08,high,low,low,medium,low_low_medium
-M024,Austria,,27000,780,0,0.0,92548.75,1352,68.45,medium,low,low,medium,low_low_medium
-M025,United Kingdom,,62000,1950,2,0.0010256410256410256,22647.55,866,26.15,medium,low,low,high,low_low_high
-M026,Sweden,,115000,3200,1,0.0003125,79076.55,1155,68.46,high,low,low,medium,low_low_medium
-M027,United Kingdom,,73000,2450,3,0.0012244897959183673,175083.51,2313,75.7,medium,low,low,high,low_low_high
-M028,Poland,,142000,4100,4,0.000975609756097561,158698.27,1177,134.83,high,low,low,high,low_low_high
-M029,United Kingdom,,95000,2800,0,0.0,54478.47,1051,51.83,medium,low,low,medium,low_low_medium
-M030,United Kingdom,,38000,1100,1,0.0009090909090909091,87877.24,830,105.88,medium,low,low,medium,low_low_medium
-M031,Czech Republic,,58000,1690,2,0.001183431952662722,122890.13,3532,34.79,medium,low,low,medium,low_low_medium
-M032,United Kingdom,,49000,1520,0,0.0,180289.98,2923,61.68,medium,low,low,high,low_low_high
-M033,Denmark,,36000,1050,1,0.0009523809523809524,136627.44,3488,39.17,medium,low,low,medium,low_low_medium
-M034,United Kingdom,,71000,2180,2,0.0009174311926605505,32751.12,1634,20.04,medium,low,low,low,low_low_low
-M035,Norway,,165000,4600,3,0.0006521739130434783,153243.34,2915,52.57,high,low,low,high,low_low_high
-M036,United Kingdom,,44000,1320,1,0.0007575757575757576,24978.78,2707,9.23,medium,low,low,medium,low_low_medium
-M037,Finland,,29000,870,0,0.0,22807.53,2024,11.27,medium,low,low,medium,low_low_medium
-M038,United Kingdom,,112000,3300,4,0.0012121212121212121,39656.51,1914,20.72,high,low,low,medium,low_low_medium
-M039,Hungary,,84000,2550,2,0.000784313725490196,23266.43,277,83.99,medium,low,low,high,low_low_high
-M040,United Kingdom,,67000,2100,0,0.0,184853.06,1663,111.16,medium,low,low,high,low_low_high
-M041,Romania,,51000,1480,3,0.002027027027027027,37734.67,1321,28.57,medium,low,low,medium,low_low_medium
-M042,United Kingdom,,189000,5200,2,0.0003846153846153846,11999.63,923,13.0,high,low,low,medium,low_low_medium
-M043,Greece,,33000,990,1,0.00101010101010101,74717.78,3588,20.82,medium,low,low,medium,low_low_medium
-M044,United Kingdom,,76000,2340,1,0.00042735042735042735,168681.31,1778,94.87,medium,low,low,high,low_low_high
-M045,Bulgaria,,42000,1280,0,0.0,185193.88,2812,65.86,medium,low,low,high,low_low_high
-M046,United Kingdom,,59000,1780,3,0.0016853932584269663,158955.33,3209,49.53,medium,low,low,high,low_low_high
-M047,Croatia,,97000,2900,2,0.000689655172413793,109646.62,3855,28.44,medium,low,low,medium,low_low_medium
-M048,United Kingdom,,128000,3850,0,0.0,1410.75,2422,0.58,high,low,low,low,low_low_low
-M049,Slovakia,,24000,720,0,0.0,150358.79,1561,96.32,medium,low,low,high,low_low_high
-M050,United Kingdom,,145000,4200,2,0.0004761904761904762,71724.92,138,519.75,high,low,low,high,low_low_high
+M001,United Kingdom,,125000,3420,2,0.0005847953216374269,180137.28,3387,53.18,high,low,low,high,low_low_high
+M002,United States,,89000,2100,5,0.002380952380952381,38112.81,529,72.05,medium,low,low,medium,low_low_medium
+M003,Germany,,210000,5800,1,0.00017241379310344826,28406.37,564,50.37,high,low,low,medium,low_low_medium
+M004,United Kingdom,,78000,1890,0,0.0,2921.08,194,15.06,medium,low,low,medium,low_low_medium
+M005,United States,,45000,1200,3,0.0025,57972.77,3775,15.36,medium,low,low,medium,low_low_medium
+M006,United Kingdom,,320000,8900,4,0.00044943820224719103,161456.69,1314,122.87,high,low,low,high,low_low_high
+M007,United States,,156000,4100,2,0.0004878048780487805,169528.72,3403,49.82,high,low,low,high,low_low_high
+M008,United Kingdom,,67000,2100,1,0.0004761904761904762,1077.86,84,12.83,medium,low,low,high,low_low_high
+M009,France,,34000,980,0,0.0,83056.81,528,157.3,medium,low,low,high,low_low_high
+M010,United Kingdom,,52000,1650,2,0.0012121212121212121,11983.51,3370,3.56,medium,low,low,medium,low_low_medium
+M011,Spain,,98000,3200,6,0.001875,73384.35,2424,30.27,medium,low,low,medium,low_low_medium
+M012,United Kingdom,,28000,890,1,0.0011235955056179776,168032.74,2535,66.29,medium,low,low,high,low_low_high
+M013,Italy,,187000,5200,3,0.000576923076923077,1191.58,3770,0.32,high,low,low,medium,low_low_medium
+M014,United Kingdom,,41000,1340,0,0.0,68917.84,3208,21.48,medium,low,low,medium,low_low_medium
+M015,United Kingdom,,92000,2100,2,0.0009523809523809524,134763.53,1102,122.29,medium,low,low,medium,low_low_medium
+M016,Netherlands,,76000,2400,1,0.0004166666666666667,39936.23,2690,14.85,medium,low,low,low,low_low_low
+M017,United Kingdom,,55000,1890,4,0.0021164021164021165,32982.55,3344,9.86,medium,low,low,low,low_low_low
+M018,Ireland,,44000,1250,2,0.0016,35959.35,3670,9.8,medium,low,low,low,low_low_low
+M019,United Kingdom,,135000,3800,0,0.0,18129.16,271,66.9,high,low,low,medium,low_low_medium
+M020,Portugal,,22000,650,0,0.0,121743.28,3557,34.23,medium,low,low,medium,low_low_medium
+M021,United Kingdom,,88000,2650,3,0.0011320754716981133,178061.71,1636,108.84,medium,low,low,high,low_low_high
+M022,Belgium,,31000,920,1,0.0010869565217391304,6333.57,1194,5.3,medium,low,low,medium,low_low_medium
+M023,United Kingdom,,198000,5400,5,0.000925925925925926,74115.3,2261,32.78,high,low,low,medium,low_low_medium
+M024,Austria,Europe,27000,780,0,0.0,172576.24,1248,138.28,medium,low,low,high,low_low_high
+M025,United Kingdom,,62000,1950,2,0.0010256410256410256,10881.05,1217,8.94,medium,low,low,medium,low_low_medium
+M026,Sweden,Europe,115000,3200,1,0.0003125,9634.45,985,9.78,high,low,low,medium,low_low_medium
+M027,United Kingdom,,73000,2450,3,0.0012244897959183673,13871.28,3271,4.24,medium,low,low,low,low_low_low
+M028,Poland,Europe,142000,4100,4,0.000975609756097561,157248.7,1139,138.06,high,low,low,high,low_low_high
+M029,United Kingdom,,95000,2800,0,0.0,57541.39,1118,51.47,medium,low,low,medium,low_low_medium
+M030,United Kingdom,,38000,1100,1,0.0009090909090909091,176227.61,3249,54.24,medium,low,low,high,low_low_high
+M031,Czech Republic,Europe,58000,1690,2,0.001183431952662722,153184.62,1626,94.21,medium,low,low,high,low_low_high
+M032,United Kingdom,,49000,1520,0,0.0,17070.76,316,54.02,medium,low,low,high,low_low_high
+M033,Denmark,Europe,36000,1050,1,0.0009523809523809524,146818.94,231,635.58,medium,low,low,high,low_low_high
+M034,United Kingdom,,71000,2180,2,0.0009174311926605505,58348.68,882,66.15,medium,low,low,medium,low_low_medium
+M035,Norway,Europe,165000,4600,3,0.0006521739130434783,56150.74,2599,21.6,high,low,low,medium,low_low_medium
+M036,United Kingdom,,44000,1320,1,0.0007575757575757576,14531.81,316,45.99,medium,low,low,medium,low_low_medium
+M037,Finland,Europe,29000,870,0,0.0,78181.58,777,100.62,medium,low,low,medium,low_low_medium
+M038,United Kingdom,,112000,3300,4,0.0012121212121212121,88105.02,896,98.33,high,low,low,medium,low_low_medium
+M039,Hungary,Europe,84000,2550,2,0.000784313725490196,50434.94,603,83.64,medium,low,low,medium,low_low_medium
+M040,United Kingdom,,67000,2100,0,0.0,194227.88,3925,49.48,medium,low,low,high,low_low_high
+M041,Romania,Europe,51000,1480,3,0.002027027027027027,135222.57,2942,45.96,medium,low,low,medium,low_low_medium
+M042,United Kingdom,,189000,5200,2,0.0003846153846153846,53926.83,3967,13.59,high,low,low,medium,low_low_medium
+M043,Greece,Europe,33000,990,1,0.00101010101010101,47087.29,3637,12.95,medium,low,low,low,low_low_low
+M044,United Kingdom,,76000,2340,1,0.00042735042735042735,60674.44,2517,24.11,medium,low,low,medium,low_low_medium
+M045,Bulgaria,Europe,42000,1280,0,0.0,58446.47,606,96.45,medium,low,low,medium,low_low_medium
+M046,United Kingdom,,59000,1780,3,0.0016853932584269663,35844.43,2727,13.14,medium,low,low,low,low_low_low
+M047,Croatia,Europe,97000,2900,2,0.000689655172413793,76121.66,2399,31.73,medium,low,low,medium,low_low_medium
+M048,United Kingdom,,128000,3850,0,0.0,82347.16,789,104.37,high,low,low,high,low_low_high
+M049,Slovakia,Europe,24000,720,0,0.0,161543.41,3595,44.94,medium,low,low,high,low_low_high
+M050,United Kingdom,,145000,4200,2,0.0004761904761904762,173976.91,3504,49.65,high,low,low,high,low_low_high

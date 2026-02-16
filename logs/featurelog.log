@@ -1,0 +1,192 @@
+2026-02-16 17:20:01,865 | INFO | featurelog | [STEP 1/10] Loading merchant dataset
+2026-02-16 17:20:01,885 | INFO | featurelog | Loaded 50 rows
+2026-02-16 17:20:01,886 | INFO | featurelog | Valid rows: 50
+2026-02-16 17:20:01,891 | INFO | featurelog | [STEP 2/10] Ensuring internal API is running
+2026-02-16 17:20:01,917 | INFO | featurelog | Internal API is ready to use
+2026-02-16 17:20:01,918 | INFO | featurelog | [STEP 3/10] Starting background PDF extraction
+2026-02-16 17:20:01,922 | INFO | featurelog | [STEP 4/10] Fetching country metadata (parallel)
+2026-02-16 17:20:19,369 | INFO | featurelog | SUCCESS country=Germany
+2026-02-16 17:20:19,372 | INFO | featurelog | SUCCESS country=France
+2026-02-16 17:20:19,387 | INFO | featurelog | SUCCESS country=United Kingdom
+2026-02-16 17:20:19,476 | INFO | featurelog | SUCCESS country=Spain
+2026-02-16 17:20:19,492 | INFO | featurelog | SUCCESS country=United States
+2026-02-16 17:20:36,402 | INFO | featurelog | SUCCESS country=Italy
+2026-02-16 17:20:36,403 | INFO | featurelog | SUCCESS country=Netherlands
+2026-02-16 17:20:36,417 | INFO | featurelog | SUCCESS country=Portugal
+2026-02-16 17:20:36,419 | INFO | featurelog | SUCCESS country=Ireland
+2026-02-16 17:20:36,420 | INFO | featurelog | SUCCESS country=Belgium
+2026-02-16 17:20:53,447 | INFO | featurelog | SUCCESS country=Austria
+2026-02-16 17:20:53,448 | INFO | featurelog | SUCCESS country=Sweden
+2026-02-16 17:20:53,463 | INFO | featurelog | SUCCESS country=Denmark
+2026-02-16 17:20:53,465 | INFO | featurelog | SUCCESS country=Poland
+2026-02-16 17:20:53,466 | INFO | featurelog | SUCCESS country=Czech Republic
+2026-02-16 17:21:10,470 | INFO | featurelog | SUCCESS country=Finland
+2026-02-16 17:21:10,471 | INFO | featurelog | SUCCESS country=Norway
+2026-02-16 17:21:10,522 | INFO | featurelog | SUCCESS country=Romania
+2026-02-16 17:21:10,523 | INFO | featurelog | SUCCESS country=Hungary
+2026-02-16 17:21:10,523 | INFO | featurelog | SUCCESS country=Greece
+2026-02-16 17:21:27,524 | INFO | featurelog | SUCCESS country=Bulgaria
+2026-02-16 17:21:27,539 | INFO | featurelog | SUCCESS country=Croatia
+2026-02-16 17:21:27,571 | INFO | featurelog | SUCCESS country=Slovakia
+2026-02-16 17:21:27,574 | INFO | featurelog | Fetched metadata for 23 countries
+2026-02-16 17:21:27,574 | INFO | featurelog | [STEP 5/10] Fetching internal risk data (parallel)
+2026-02-16 17:21:27,607 | INFO | featurelog | SUCCESS merchant_id=M002
+2026-02-16 17:21:27,611 | INFO | featurelog | SUCCESS merchant_id=M003
+2026-02-16 17:21:27,623 | INFO | featurelog | SUCCESS merchant_id=M001
+2026-02-16 17:21:27,633 | INFO | featurelog | SUCCESS merchant_id=M004
+2026-02-16 17:21:27,639 | INFO | featurelog | SUCCESS merchant_id=M005
+2026-02-16 17:21:27,642 | INFO | featurelog | SUCCESS merchant_id=M006
+2026-02-16 17:21:27,644 | INFO | featurelog | SUCCESS merchant_id=M009
+2026-02-16 17:21:27,647 | INFO | featurelog | SUCCESS merchant_id=M008
+2026-02-16 17:21:27,660 | INFO | featurelog | SUCCESS merchant_id=M007
+2026-02-16 17:21:27,674 | INFO | featurelog | SUCCESS merchant_id=M012
+2026-02-16 17:21:27,678 | INFO | featurelog | SUCCESS merchant_id=M016
+2026-02-16 17:21:27,686 | INFO | featurelog | SUCCESS merchant_id=M013
+2026-02-16 17:21:27,694 | INFO | featurelog | SUCCESS merchant_id=M010
+2026-02-16 17:21:27,712 | INFO | featurelog | SUCCESS merchant_id=M015
+2026-02-16 17:21:27,714 | INFO | featurelog | SUCCESS merchant_id=M014
+2026-02-16 17:21:27,714 | INFO | featurelog | SUCCESS merchant_id=M011
+2026-02-16 17:21:27,716 | INFO | featurelog | SUCCESS merchant_id=M018
+2026-02-16 17:21:27,717 | INFO | featurelog | SUCCESS merchant_id=M017
+2026-02-16 17:21:27,717 | INFO | featurelog | SUCCESS merchant_id=M019
+2026-02-16 17:21:27,721 | INFO | featurelog | SUCCESS merchant_id=M020
+2026-02-16 17:21:27,728 | INFO | featurelog | SUCCESS merchant_id=M022
+2026-02-16 17:21:27,733 | INFO | featurelog | SUCCESS merchant_id=M021
+2026-02-16 17:21:27,740 | INFO | featurelog | SUCCESS merchant_id=M024
+2026-02-16 17:21:27,745 | INFO | featurelog | SUCCESS merchant_id=M023
+2026-02-16 17:21:27,750 | INFO | featurelog | SUCCESS merchant_id=M025
+2026-02-16 17:21:27,758 | INFO | featurelog | SUCCESS merchant_id=M026
+2026-02-16 17:21:27,761 | INFO | featurelog | SUCCESS merchant_id=M028
+2026-02-16 17:21:27,765 | INFO | featurelog | SUCCESS merchant_id=M027
+2026-02-16 17:21:27,769 | INFO | featurelog | SUCCESS merchant_id=M029
+2026-02-16 17:21:27,777 | INFO | featurelog | SUCCESS merchant_id=M030
+2026-02-16 17:21:27,782 | INFO | featurelog | SUCCESS merchant_id=M031
+2026-02-16 17:21:27,787 | INFO | featurelog | SUCCESS merchant_id=M032
+2026-02-16 17:21:27,794 | INFO | featurelog | SUCCESS merchant_id=M033
+2026-02-16 17:21:27,799 | INFO | featurelog | SUCCESS merchant_id=M034
+2026-02-16 17:21:27,802 | INFO | featurelog | SUCCESS merchant_id=M035
+2026-02-16 17:21:27,808 | INFO | featurelog | SUCCESS merchant_id=M036
+2026-02-16 17:21:27,812 | INFO | featurelog | SUCCESS merchant_id=M037
+2026-02-16 17:21:27,813 | INFO | featurelog | SUCCESS merchant_id=M038
+2026-02-16 17:21:27,817 | INFO | featurelog | SUCCESS merchant_id=M039
+2026-02-16 17:21:27,823 | INFO | featurelog | SUCCESS merchant_id=M040
+2026-02-16 17:21:27,826 | INFO | featurelog | SUCCESS merchant_id=M041
+2026-02-16 17:21:27,829 | INFO | featurelog | SUCCESS merchant_id=M042
+2026-02-16 17:21:27,834 | INFO | featurelog | SUCCESS merchant_id=M043
+2026-02-16 17:21:27,839 | INFO | featurelog | SUCCESS merchant_id=M044
+2026-02-16 17:21:27,844 | INFO | featurelog | SUCCESS merchant_id=M045
+2026-02-16 17:21:27,844 | INFO | featurelog | SUCCESS merchant_id=M046
+2026-02-16 17:21:27,846 | INFO | featurelog | SUCCESS merchant_id=M048
+2026-02-16 17:21:27,849 | INFO | featurelog | SUCCESS merchant_id=M047
+2026-02-16 17:21:27,850 | INFO | featurelog | SUCCESS merchant_id=M049
+2026-02-16 17:21:27,851 | INFO | featurelog | SUCCESS merchant_id=M050
+2026-02-16 17:21:27,856 | INFO | featurelog | Fetched internal risk for 50 merchants
+2026-02-16 17:21:27,856 | INFO | featurelog | [STEP 6/10] Building enriched dataset
+2026-02-16 17:21:27,863 | INFO | featurelog | Final dataset size: 50
+2026-02-16 17:21:27,864 | INFO | featurelog | [STEP 7/10] Waiting for PDF processing to complete
+2026-02-16 17:21:27,865 | INFO | featurelog | Extracted 649 characters from PDF
+2026-02-16 17:21:27,865 | INFO | featurelog | [STEP 8/10] Scraping claritypay.com
+2026-02-16 17:21:27,866 | INFO | featurelog | Loading existing scrape data from output\claritypay_site_data.json
+2026-02-16 17:21:27,870 | INFO | featurelog | Website data saved output\claritypay_site_data.json
+2026-02-16 17:21:27,871 | INFO | featurelog | [STEP 9/10] Saving outputs
+2026-02-16 17:21:27,879 | INFO | featurelog | Dataset saved output\enriched_merchants.csv
+2026-02-16 17:21:27,882 | INFO | featurelog | PDF text saved output\merchant_summary.txt
+2026-02-16 17:21:27,882 | INFO | featurelog | [STEP 10/10] Building underwriting feature view
+2026-02-16 17:21:27,897 | INFO | featurelog | Underwriting feature view saved output\underwriting_features.csv
+2026-02-16 17:21:27,898 | INFO | featurelog | Data pipeline complete — returning datasets to caller
+2026-02-16 17:26:31,781 | INFO | featurelog | [STEP 1/10] Loading merchant dataset
+2026-02-16 17:26:31,804 | INFO | featurelog | Loaded 50 rows
+2026-02-16 17:26:31,835 | INFO | featurelog | Valid rows: 50
+2026-02-16 17:26:31,836 | INFO | featurelog | [STEP 2/10] Ensuring internal API is running
+2026-02-16 17:26:31,869 | INFO | featurelog | Internal API is ready to use
+2026-02-16 17:26:31,870 | INFO | featurelog | [STEP 3/10] Starting background PDF extraction
+2026-02-16 17:26:31,874 | INFO | featurelog | [STEP 4/10] Fetching country metadata (parallel)
+2026-02-16 17:26:48,957 | INFO | featurelog | SUCCESS country=United States
+2026-02-16 17:26:48,960 | INFO | featurelog | SUCCESS country=Germany
+2026-02-16 17:26:48,963 | INFO | featurelog | SUCCESS country=Spain
+2026-02-16 17:26:48,964 | INFO | featurelog | SUCCESS country=United Kingdom
+2026-02-16 17:26:48,965 | INFO | featurelog | SUCCESS country=France
+2026-02-16 17:27:06,003 | INFO | featurelog | SUCCESS country=Italy
+2026-02-16 17:27:06,032 | INFO | featurelog | SUCCESS country=Portugal
+2026-02-16 17:27:06,036 | INFO | featurelog | SUCCESS country=Belgium
+2026-02-16 17:27:06,039 | INFO | featurelog | SUCCESS country=Ireland
+2026-02-16 17:27:06,040 | INFO | featurelog | SUCCESS country=Netherlands
+2026-02-16 17:27:25,743 | INFO | featurelog | SUCCESS country=Austria
+2026-02-16 17:27:25,862 | INFO | featurelog | SUCCESS country=Sweden
+2026-02-16 17:27:26,009 | INFO | featurelog | SUCCESS country=Czech Republic
+2026-02-16 17:27:35,863 | INFO | featurelog | SUCCESS country=Norway
+2026-02-16 17:27:35,889 | INFO | featurelog | SUCCESS country=Hungary
+2026-02-16 17:27:35,939 | INFO | featurelog | SUCCESS country=Finland
+2026-02-16 17:27:40,214 | INFO | featurelog | SUCCESS country=Denmark
+2026-02-16 17:27:40,248 | INFO | featurelog | SUCCESS country=Poland
+2026-02-16 17:27:43,937 | INFO | featurelog | SUCCESS country=Bulgaria
+2026-02-16 17:27:43,958 | INFO | featurelog | SUCCESS country=Romania
+2026-02-16 17:27:43,971 | INFO | featurelog | SUCCESS country=Greece
+2026-02-16 17:27:49,162 | INFO | featurelog | SUCCESS country=Croatia
+2026-02-16 17:27:49,183 | INFO | featurelog | SUCCESS country=Slovakia
+2026-02-16 17:27:49,196 | INFO | featurelog | Fetched metadata for 23 countries
+2026-02-16 17:27:49,199 | INFO | featurelog | [STEP 5/10] Fetching internal risk data (parallel)
+2026-02-16 17:27:49,334 | INFO | featurelog | SUCCESS merchant_id=M001
+2026-02-16 17:27:49,344 | INFO | featurelog | SUCCESS merchant_id=M002
+2026-02-16 17:27:49,366 | INFO | featurelog | SUCCESS merchant_id=M003
+2026-02-16 17:27:49,662 | INFO | featurelog | SUCCESS merchant_id=M004
+2026-02-16 17:27:49,794 | INFO | featurelog | SUCCESS merchant_id=M005
+2026-02-16 17:27:49,838 | INFO | featurelog | SUCCESS merchant_id=M006
+2026-02-16 17:27:49,928 | INFO | featurelog | SUCCESS merchant_id=M007
+2026-02-16 17:27:49,998 | INFO | featurelog | SUCCESS merchant_id=M008
+2026-02-16 17:27:50,158 | INFO | featurelog | SUCCESS merchant_id=M010
+2026-02-16 17:27:50,198 | INFO | featurelog | SUCCESS merchant_id=M009
+2026-02-16 17:27:50,327 | INFO | featurelog | SUCCESS merchant_id=M011
+2026-02-16 17:27:50,551 | INFO | featurelog | SUCCESS merchant_id=M012
+2026-02-16 17:27:50,628 | INFO | featurelog | SUCCESS merchant_id=M015
+2026-02-16 17:27:50,708 | INFO | featurelog | SUCCESS merchant_id=M014
+2026-02-16 17:27:50,870 | INFO | featurelog | SUCCESS merchant_id=M016
+2026-02-16 17:27:50,924 | INFO | featurelog | SUCCESS merchant_id=M013
+2026-02-16 17:27:51,055 | INFO | featurelog | SUCCESS merchant_id=M018
+2026-02-16 17:27:51,091 | INFO | featurelog | SUCCESS merchant_id=M017
+2026-02-16 17:27:51,326 | INFO | featurelog | SUCCESS merchant_id=M020
+2026-02-16 17:27:51,365 | INFO | featurelog | SUCCESS merchant_id=M019
+2026-02-16 17:27:51,521 | INFO | featurelog | SUCCESS merchant_id=M021
+2026-02-16 17:27:51,661 | INFO | featurelog | SUCCESS merchant_id=M022
+2026-02-16 17:27:51,758 | INFO | featurelog | SUCCESS merchant_id=M023
+2026-02-16 17:27:51,946 | INFO | featurelog | SUCCESS merchant_id=M024
+2026-02-16 17:27:52,319 | INFO | featurelog | SUCCESS merchant_id=M025
+2026-02-16 17:27:52,560 | INFO | featurelog | SUCCESS merchant_id=M026
+2026-02-16 17:27:53,135 | INFO | featurelog | SUCCESS merchant_id=M027
+2026-02-16 17:27:53,208 | INFO | featurelog | SUCCESS merchant_id=M028
+2026-02-16 17:27:53,375 | INFO | featurelog | SUCCESS merchant_id=M029
+2026-02-16 17:27:53,707 | INFO | featurelog | SUCCESS merchant_id=M030
+2026-02-16 17:27:54,171 | INFO | featurelog | SUCCESS merchant_id=M031
+2026-02-16 17:27:54,910 | INFO | featurelog | SUCCESS merchant_id=M032
+2026-02-16 17:27:55,094 | INFO | featurelog | SUCCESS merchant_id=M033
+2026-02-16 17:27:56,204 | INFO | featurelog | SUCCESS merchant_id=M037
+2026-02-16 17:27:56,376 | INFO | featurelog | SUCCESS merchant_id=M038
+2026-02-16 17:27:56,948 | INFO | featurelog | SUCCESS merchant_id=M040
+2026-02-16 17:27:57,070 | INFO | featurelog | SUCCESS merchant_id=M041
+2026-02-16 17:27:57,199 | INFO | featurelog | SUCCESS merchant_id=M042
+2026-02-16 17:27:57,417 | INFO | featurelog | SUCCESS merchant_id=M043
+2026-02-16 17:27:57,793 | INFO | featurelog | SUCCESS merchant_id=M034
+2026-02-16 17:27:58,013 | INFO | featurelog | SUCCESS merchant_id=M044
+2026-02-16 17:27:58,116 | INFO | featurelog | SUCCESS merchant_id=M045
+2026-02-16 17:27:58,249 | INFO | featurelog | SUCCESS merchant_id=M035
+2026-02-16 17:27:58,271 | INFO | featurelog | SUCCESS merchant_id=M046
+2026-02-16 17:27:58,404 | INFO | featurelog | SUCCESS merchant_id=M036
+2026-02-16 17:27:58,477 | INFO | featurelog | SUCCESS merchant_id=M047
+2026-02-16 17:27:58,615 | INFO | featurelog | SUCCESS merchant_id=M048
+2026-02-16 17:27:58,698 | INFO | featurelog | SUCCESS merchant_id=M039
+2026-02-16 17:27:58,832 | INFO | featurelog | SUCCESS merchant_id=M049
+2026-02-16 17:27:59,492 | INFO | featurelog | SUCCESS merchant_id=M050
+2026-02-16 17:27:59,624 | INFO | featurelog | Fetched internal risk for 50 merchants
+2026-02-16 17:27:59,694 | INFO | featurelog | [STEP 6/10] Building enriched dataset
+2026-02-16 17:27:59,790 | INFO | featurelog | Final dataset size: 50
+2026-02-16 17:27:59,816 | INFO | featurelog | [STEP 7/10] Waiting for PDF processing to complete
+2026-02-16 17:27:59,820 | INFO | featurelog | Extracted 649 characters from PDF
+2026-02-16 17:27:59,821 | INFO | featurelog | [STEP 8/10] Scraping claritypay.com
+2026-02-16 17:27:59,849 | INFO | featurelog | Loading existing scrape data from output\claritypay_site_data.json
+2026-02-16 17:27:59,877 | INFO | featurelog | Website data saved output\claritypay_site_data.json
+2026-02-16 17:27:59,911 | INFO | featurelog | [STEP 9/10] Saving outputs
+2026-02-16 17:27:59,961 | INFO | featurelog | Dataset saved output\enriched_merchants.csv
+2026-02-16 17:27:59,977 | INFO | featurelog | PDF text saved output\merchant_summary.txt
+2026-02-16 17:27:59,993 | INFO | featurelog | [STEP 10/10] Building underwriting feature view
+2026-02-16 17:28:00,109 | INFO | featurelog | Underwriting feature view saved output\underwriting_features.csv
+2026-02-16 17:28:00,171 | INFO | featurelog | Data pipeline complete — returning datasets to caller
