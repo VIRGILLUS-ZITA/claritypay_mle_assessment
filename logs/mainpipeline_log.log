@@ -73,3 +73,93 @@ Generated files:
 Pipeline completed successfully
 ====================================================
 2026-02-16 17:58:25,494 | INFO | mainpipeline_log | Underwriting report saved -> output\underwriting_report.txt
+2026-02-16 18:02:07,576 | INFO | mainpipeline_log | [STEP 1/5] Building enriched merchant dataset with features
+2026-02-16 18:02:07,577 | INFO | mainpipeline_log | 
+=== Building dataset ===
+2026-02-16 18:03:33,168 | INFO | mainpipeline_log | [STEP 2/5] Model training and prediction
+2026-02-16 18:03:33,168 | INFO | mainpipeline_log | 
+=== MODEL STEP ===
+2026-02-16 18:03:33,168 | INFO | mainpipeline_log | Loading existing model...
+2026-02-16 18:03:33,171 | INFO | mainpipeline_log | [STEP 3/5] Generating predictions with the model
+2026-02-16 18:03:33,171 | INFO | mainpipeline_log | 
+=== PREDICTION STEP ===
+2026-02-16 18:03:33,182 | INFO | mainpipeline_log | Predictions saved output\merchant_predictions.csv
+2026-02-16 18:03:33,182 | INFO | mainpipeline_log | [STEP 4/5] Generating portfolio risk metrics and dataset
+2026-02-16 18:03:33,182 | INFO | mainpipeline_log | 
+=== PORTFOLIO RISK ANALYSIS ===
+2026-02-16 18:03:33,186 | INFO | mainpipeline_log | PORTFOLIO RISK SUMMARY:
+2026-02-16 18:03:33,186 | INFO | mainpipeline_log | Total merchants: 50
+2026-02-16 18:03:33,186 | INFO | mainpipeline_log | High-risk merchants: 21 (42.0%)
+2026-02-16 18:03:33,186 | INFO | mainpipeline_log | High-risk exposure volume: 1370000
+2026-02-16 18:03:33,186 | INFO | mainpipeline_log | Expected disputes (est): 35352.27
+2026-02-16 18:03:33,187 | INFO | mainpipeline_log | Average portfolio risk score: 0.335
+2026-02-16 18:03:33,191 | INFO | mainpipeline_log | Portfolio dataset saved output\portfolio_view.csv
+2026-02-16 18:03:33,191 | INFO | mainpipeline_log | [STEP 5/5] Generating underwriting report with LLM
+2026-02-16 18:03:33,191 | INFO | mainpipeline_log | 
+=== GENERATING UNDERWRITING REPORT ===
+2026-02-16 18:07:16,023 | INFO | mainpipeline_log | 
+====================================================
+PIPELINE EXECUTION SUMMARY
+====================================================
+Dataset processed:        50 merchants
+High risk merchants:      21 (42.0%)
+Portfolio risk level:     Elevated
+Report provider:          Local LLM
+
+Generated files:
+ - output/enriched_merchants.csv
+ - output/underwriting_features.csv
+ - output/merchant_predictions.csv
+ - output/portfolio_view.csv
+ - output/underwriting_report.txt
+ - models/risk_model.pkl
+
+Pipeline completed successfully
+====================================================
+2026-02-16 18:07:16,025 | INFO | mainpipeline_log | Underwriting report saved -> output\underwriting_report.txt
+2026-02-16 18:07:46,901 | INFO | mainpipeline_log | [STEP 1/5] Building enriched merchant dataset with features
+2026-02-16 18:07:46,902 | INFO | mainpipeline_log | 
+=== Building dataset ===
+2026-02-16 18:09:12,446 | INFO | mainpipeline_log | [STEP 2/5] Model training and prediction
+2026-02-16 18:09:12,446 | INFO | mainpipeline_log | 
+=== MODEL STEP ===
+2026-02-16 18:09:12,447 | INFO | mainpipeline_log | Loading existing model...
+2026-02-16 18:09:12,450 | INFO | mainpipeline_log | [STEP 3/5] Generating predictions with the model
+2026-02-16 18:09:12,450 | INFO | mainpipeline_log | 
+=== PREDICTION STEP ===
+2026-02-16 18:09:12,461 | INFO | mainpipeline_log | Predictions saved output\merchant_predictions.csv
+2026-02-16 18:09:12,462 | INFO | mainpipeline_log | [STEP 4/5] Generating portfolio risk metrics and dataset
+2026-02-16 18:09:12,462 | INFO | mainpipeline_log | 
+=== PORTFOLIO RISK ANALYSIS ===
+2026-02-16 18:09:12,466 | INFO | mainpipeline_log | 
+========== PORTFOLIO RISK SUMMARY ==========
+Total merchants:               50
+High-risk merchants:           20 (40.0%)
+High-risk exposure volume:     1265000
+Expected disputes (est):       33187.7
+Average portfolio risk score:  0.3270
+=============================================
+2026-02-16 18:09:12,471 | INFO | mainpipeline_log | Portfolio dataset saved output\portfolio_view.csv
+2026-02-16 18:09:12,471 | INFO | mainpipeline_log | [STEP 5/5] Generating underwriting report with LLM
+2026-02-16 18:09:12,472 | INFO | mainpipeline_log | 
+=== GENERATING UNDERWRITING REPORT ===
+2026-02-16 18:11:49,969 | INFO | mainpipeline_log | 
+====================================================
+PIPELINE EXECUTION SUMMARY
+====================================================
+Dataset processed:        50 merchants
+High risk merchants:      20 (40.0%)
+Portfolio risk level:     Elevated
+Report provider:          Local LLM
+
+Generated files:
+ - output/enriched_merchants.csv
+ - output/underwriting_features.csv
+ - output/merchant_predictions.csv
+ - output/portfolio_view.csv
+ - output/underwriting_report.txt
+ - models/risk_model.pkl
+
+Pipeline completed successfully
+====================================================
+2026-02-16 18:11:49,970 | INFO | mainpipeline_log | Underwriting report saved -> output\underwriting_report.txt

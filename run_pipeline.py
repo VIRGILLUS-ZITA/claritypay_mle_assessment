@@ -110,7 +110,7 @@ def main():
     log_step(4, TOTAL_STEPS, "Generating portfolio risk metrics and dataset")
     logger.info("\n=== PORTFOLIO RISK ANALYSIS ===")
 
-    metrics, merged_df = generate_portfolio_risk(final_df, scored_df)
+    metrics, merged_df = generate_portfolio_risk(final_df, scored_df, logger)
 
     merged_path = os.path.join(output_dir, "portfolio_view.csv")
     merged_df.to_csv(merged_path, index=False)

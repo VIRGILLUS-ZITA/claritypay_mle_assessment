@@ -1,3 +1,4 @@
+from fastapi import logger
 import pandas as pd
 
 
@@ -51,26 +52,34 @@ def compute_portfolio_metrics(merged: pd.DataFrame) -> dict:
 # ------------------------------------------------------
 # Pretty print summary
 # ------------------------------------------------------
-def print_portfolio_summary(metrics: dict):
+def print_portfolio_summary(metrics: dict, logger):
+    # 1. Build the multi-line string block
+    summary_block = (
+        "\n========== PORTFOLIO RISK SUMMARY ==========\n"
+        f"Total merchants:               {metrics['total_merchants']}\n"
+        f"High-risk merchants:           {metrics['high_risk_merchants']} ({metrics['high_risk_ratio']*100:.1f}%)\n"
+        f"High-risk exposure volume:     {metrics['high_risk_volume']}\n"
+        f"Expected disputes (est):       {metrics['expected_disputes']}\n"
+        f"Average portfolio risk score:  {metrics['avg_risk_probability']:.4f}\n"
+        "============================================="
+    )
 
-    print("\n========== PORTFOLIO RISK SUMMARY ==========")
-    print(f"Total merchants: {metrics['total_merchants']}")
-    print(f"High-risk merchants: {metrics['high_risk_merchants']} ({metrics['high_risk_ratio']*100:.1f}%)")
-    print(f"High-risk exposure volume: {metrics['high_risk_volume']}")
-    print(f"Expected disputes (est): {metrics['expected_disputes']}")
-    print(f"Average portfolio risk score: {metrics['avg_risk_probability']}")
-    print("=============================================\n")
+    # 2. Print to terminal
+    print(summary_block)
 
+    # 3. Log to file as a single entry
+    # This ensures the "box" looks perfect in your log file
+    logger.info(summary_block)
 
 # ------------------------------------------------------
 # Full pipeline function
 # ------------------------------------------------------
-def generate_portfolio_risk(final_df: pd.DataFrame, scored_df: pd.DataFrame):
+def generate_portfolio_risk(final_df: pd.DataFrame, scored_df: pd.DataFrame, logger):
 
     merged = merge_predictions(final_df, scored_df)
 
     metrics = compute_portfolio_metrics(merged)
 
-    print_portfolio_summary(metrics)
+    print_portfolio_summary(metrics, logger)
 
     return metrics, merged
