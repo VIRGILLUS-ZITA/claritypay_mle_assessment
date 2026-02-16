@@ -221,7 +221,7 @@ def run_pipeline(input_path: str, output_dir: str):
 
     logger.info(f"Underwriting feature view saved {features_path}")
 
-    logger.info("Data pipeline complete — returning datasets to caller")
+    logger.info("Data pipeline complete -> returning datasets to caller")
 
     return final_df, features_df
 
